@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuExamenes">
+    <TextView
+        android:id="@+id/txtitExa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="¿Cúal cuestionario desea aplicar?"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/txtNombreUs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtitExa"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="Nombre"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+    <ImageView
+        android:id="@+id/imageViewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/txtNombreUs2"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/examen"
+        />
+    <Button
+        android:id="@+id/txtExamenAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded"
+        android:text="Cuestionario Administativo"
+        android:onClick="ExamenAdminEjemplo"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/imageViewMenu"
+        />
+    <Button
+        android:id="@+id/txtExamenChofer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="ExamenOperativoEjemplo"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Cuestionario Operativo"
+        android:layout_below="@+id/txtExamenAdmin"
+        />
+
+    <Button
+        android:id="@+id/txtVolverMenuP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="RegresarMenuPrin"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Regresar"
+        android:layout_below="@+id/txtExamenChofer" />
+</RelativeLayout>
+

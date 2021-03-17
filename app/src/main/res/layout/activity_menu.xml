@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".menuActivity">
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:fab_addButtonSize="normal"
+        android:layout_margin="25dp"
+        app:fab_addButtonColorNormal="@color/colorPrimaryDark"
+        app:fab_labelStyle="@style/custom_floating_buttons">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/aud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="auditorias"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_icon="@drawable/auditorias"
+            app:fab_title="Auditorias.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/cuestionarios"
+            app:fab_title="Cuestionarios."
+            android:onClick="examenes"
+            android:id="@+id/exa"
+            app:fab_colorNormal="@color/colorPrimary">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            android:onClick="resultados"
+            app:fab_icon="@drawable/resultados"
+            app:fab_title="Resultados.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:text="¿Qué deseas hacer?"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/txtNomUsr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif"
+        android:text="Nombre"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/textView2"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/volanteconcorazon"
+        />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        app:fab_addButtonSize="normal"
+        app:fab_labelsPosition="right"
+        android:layout_margin="25dp"
+        app:fab_addButtonColorNormal="@color/rosa_oscuro"
+        app:fab_labelStyle="@style/custom_floating_buttons">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/subir_datos"
+            android:onClick="subirDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/rosa_claro"
+            app:fab_icon="@drawable/subirdatos"
+            app:fab_title="Subir Datos.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+        
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/actualizar_bd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/updatebase"
+            app:fab_colorNormal="@color/rosa_claro"
+            app:fab_title="Actualizar BD.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/agregarusuarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_baseline_person_add_24"
+            app:fab_colorNormal="@color/rosa_claro"
+            app:fab_title="Agregar Usuarios.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>
+

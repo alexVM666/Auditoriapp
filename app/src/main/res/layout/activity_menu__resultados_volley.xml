@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_ResultadosVolley">
+
+    <TextView
+        android:id="@+id/txtit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:text="¿Que resultados desea ver?"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/txtNombreUsrResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtit"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif"
+        android:text="Nombre"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/txtNombreUsrResul"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/onlinetest"
+        />
+    <Button
+        android:id="@+id/auditoriasResul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded"
+        android:text="Auditorias"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/imageView2"
+        />
+    <Button
+        android:id="@+id/cuestionariosResul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Cuestionarios"
+        android:layout_below="@+id/auditoriasResul" />
+    <Button
+        android:id="@+id/Revisiones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Revisión Automóvil"
+        android:layout_below="@+id/cuestionariosResul" />
+    <Button
+        android:id="@+id/regresarmenup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Regresar"
+        android:layout_below="@+id/Revisiones" />
+</RelativeLayout>

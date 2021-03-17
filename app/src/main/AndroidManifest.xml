@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.auditoriasapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AgregarUsuarios"
+            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name=".ActivityResultVolleyChequeo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activity_Volley_Chequeo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityResultadosChequeo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityRecyclerChequeo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityChequeo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityResultVolleyExamenes"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityResultVolleyAuditorias"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activity_Volley_Auditorias"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Activity_Volley_Examenes"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".menu_ResultadosVolley"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityRecyclerExamenes"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".RecyclerAuditorias"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityRecyclerUN"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".SubirDatosMenu"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".resultados_examen_operativo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ActivityResultadosExamenAdmin"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Examen_Operativo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".EjemploExamenOperativo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".EjemploExamenAdmin"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".Examen_Administrativo"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".menuExamenes"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".MenuAuditorias"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".AuditoriaActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".menuActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
