@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EjemploExamenAdmin">
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuestionario Administrativo"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+            />
+        <CheckBox
+            android:id="@+id/checkInfoInstrucciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ver/Ocultar instrucciones"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/infoInstrucciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="A continuación se explicara la forma de contestar el cuestionario Administrativo de forma correcta: "
+            />
+        <TextView
+            android:id="@+id/instrucciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+            android:justificationMode="inter_word"
+            android:text="1.- Se dispondrá solo de 10 minutos para contestar el cuestionario despúes de llenar los datos solicitados y de presionar el botón de continuar de la parte inferior, comenzará el cuestionario."
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Fecha: "
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:id="@+id/FechaExAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Aplicó: "
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:id="@+id/aplicaraExAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="Por favor ingrese su nómina o nombre para poder buscar un usuario válido y poder contestar el cuestionario:"
+            />
+        <CheckBox
+            android:id="@+id/checkInfoNominaa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ver/Ocultar info. del usuario."
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txtNominaExamenAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Nómina: "
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+            <EditText
+                android:id="@+id/nomina_ExaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/borde"
+                android:hint=" Nómina del empleado."
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                />
+            <Button
+                android:id="@+id/btn_nomina_exAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar"
+                android:onClick="buscarEmpleado"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_rounded"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txTipoNomina_exaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Nómina: "
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                />
+            <Spinner
+                android:id="@+id/id_spinnerTipoNomina_exaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="25dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/NomNomina_ExaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Nombre: "
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etNombreNom_ExaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/gris_claro"
+                android:hint=" Nombre del empleado."
+                android:background="@drawable/borde"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="25dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/t_area_exaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección: "
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:id="@+id/areaNom_exaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/idSwitchExaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#2F3033"
+                android:text="Empleado Nuevo"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_dominioAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Vehículos que domina: "
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/dominio_vehiculos_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/gris_claro"
+                android:hint=" Vehículos"
+                android:background="@drawable/borde"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="25dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_experiencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Experiencia manejando: "
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Ex_Manejando_Admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/gris_claro"
+                android:hint=" Años manejando."
+                android:background="@drawable/borde"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="25dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/checkejemploPregunta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ver/Ocultar ejemplo de Pregunta de examen."
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            />
+    <TextView
+        android:id="@+id/txtInstruccionesPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:justificationMode="inter_word"
+        android:text="Este es un ejemplo de como se formularán las preguntas y como deben de ser respondidas, solo podra seleccionar una respuesta por pregunta y no se podrá cambiar despúes de seleccionarla."
+        />
+        <TextView
+            android:id="@+id/pregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuál es la clasificación de la velocidad?"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+        <RadioGroup
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                    android:id="@+id/ExaAdminEjemploUno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="A. Alta velocidad, exceso de velocidad, velocidad moderada, velocidad obligatoria, velocidad máxima y velocidad mínima."
+                />
+            <RadioButton
+                    android:id="@+id/ExaAdminEjemploDos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="B. Alta velocidad, exceso de velocidad, Velocidad inmoderada, velocidad obligatoria, velocidad máxima y velocidad mínima."
+                />
+            <RadioButton
+                android:id="@+id/ExaAdminEjemploTres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="C. Alta velocidad, desaceleración, exceso de velocidad."
+                />
+            <RadioButton
+                android:id="@+id/ExaAdminEjemploCuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="D. Velocidad inmoderada, velocidad obligatoria y velocidad mínima."
+                />
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_volver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:onClick="regresarMenuExa"
+                android:background="@drawable/button_rounded"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <Button
+                android:id="@+id/btn_borrarDatos_ExaAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="limpiar datos"
+                android:onClick="limpiar_click"
+                android:background="@drawable/button_rounded"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:ems="7"
+                />
+            <Button
+                android:id="@+id/btn_ContinuarExAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continuar"
+                android:background="@drawable/button_rounded"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="exAdmin"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>

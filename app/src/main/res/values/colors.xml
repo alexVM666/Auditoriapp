@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="green">#06CF10</color>
+    <color name="brown">#800F0B</color>
+    <color name="gris_oscuro">#424242</color>
+    <color name="blue_lighten_2">#9575cd</color>
+    <color name="gris_claro">#989090</color>
+    <color name="rosa_oscuro">#a00037</color>
+    <color name="rosa_claro">#d81b60</color>
+</resources>

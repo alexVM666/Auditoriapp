@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuAuditorias">
+
+    <TextView
+        android:id="@+id/txtit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:text="¿Cúal auditoria desea aplicar?"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/txtNombreUsr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtit"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif"
+        android:text="Nombre"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/txtNombreUsr"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/edicion"
+        />
+    <Button
+        android:id="@+id/txtAuditoriaInd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded"
+        android:text="Auditoria Individual"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/imageView2"
+        android:onClick="auditoriaIndividual"/>
+    <Button
+        android:id="@+id/txtAuditoria2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Auditoria General"
+        android:layout_below="@+id/txtAuditoriaInd" />
+    <Button
+        android:id="@+id/txtAutomovilesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="Chequeo"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Revisión Automovilistica"
+        android:layout_below="@+id/txtAuditoria2" />
+    <Button
+        android:id="@+id/txtVolverMenuP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Regresar"
+        android:onClick="VolverMenuPrincipal"
+        android:layout_below="@+id/txtAutomovilesView" />
+</RelativeLayout>

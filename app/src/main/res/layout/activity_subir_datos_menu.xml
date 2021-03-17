@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubirDatosMenu">
+
+    <TextView
+        android:id="@+id/txtitMenuSubir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="¿Qué datos deseas subir al servidor?"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/txtNombreUs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtitMenuSubir"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="Nombre"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+    <ImageView
+        android:id="@+id/imageViewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/txtNombreUs3"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/upload"
+        />
+    <Button
+        android:id="@+id/txtUsuariosN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded"
+        android:text="Nóminas Nuevas"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/imageViewMenu" />
+    <Button
+        android:id="@+id/txtAuditoriasSubir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Auditorias"
+        android:layout_below="@+id/txtUsuariosN" />
+    <Button
+        android:id="@+id/txtSubirChequeos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Revisión Automovilística"
+        android:layout_below="@+id/txtAuditoriasSubir" />
+    <Button
+        android:id="@+id/txtSubirCuestionarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Cuestionarios"
+        android:layout_below="@+id/txtSubirChequeos" />
+    <Button
+        android:id="@+id/txtRegresar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_rounded"
+        android:text="Regresar"
+        android:layout_below="@+id/txtSubirCuestionarios" />
+</RelativeLayout>
