@@ -1,4 +1,5 @@
 package com.example.auditoriasapp
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
@@ -16,6 +18,7 @@ import com.example.auditoriasapp.Volley.VolleySingleton
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.coroutines.launch
 import org.json.JSONException
+import org.json.JSONObject
 
 class menuActivity : AppCompatActivity() {
     private lateinit var idU: String
@@ -73,8 +76,21 @@ class menuActivity : AppCompatActivity() {
                 finish()
             }
             actualizar_bd.setOnClickListener {
-                actDatos()
+                val builder = AlertDialog.Builder(this@menuActivity)
+                builder.setTitle("¿Deseas actualizar la base de datos de la app con la BD del servidor?")
+                builder.setCancelable(true)
+                builder.setMessage("Actualizaras los datos de los Automóviles, nóminas y usuarios con la información más reciente.")
+                builder.setNegativeButton("Cancelar", DialogInterface.OnClickListener{
+                        dialog, which ->
+                    Toast.makeText(this,"Cancelado",Toast.LENGTH_SHORT).show()
+                })
+                builder.setPositiveButton("Confirmar", DialogInterface.OnClickListener{
+                        dialog, which ->
+                    actDatos()
+                })
+                builder.show()
             }
+
             agregarusuarios.setOnClickListener {
                 if(tengoInternet()){
                     Toast.makeText(this, "Conexión a internet.", Toast.LENGTH_SHORT).show()
@@ -322,7 +338,7 @@ class menuActivity : AppCompatActivity() {
                     llenarareas()
                     llenarT_vehiculos()
                     llenarAutomoviles()
-                    llenarempleados()
+                    llenarUsuarios()
                 }
                 Toast.makeText(this, "¡Listo! "+nombreUsuario +" Base de Datos actualizada.", Toast.LENGTH_SHORT).show()
             } else {

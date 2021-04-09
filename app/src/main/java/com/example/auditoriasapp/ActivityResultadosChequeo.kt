@@ -2,9 +2,9 @@ package com.example.auditoriasapp
 
 import android.Manifest
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.ColorSpace
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -12,6 +12,7 @@ import android.print.PrintAttributes
 import android.print.PrintManager
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.bumptech.glide.Glide
@@ -35,6 +36,7 @@ import kotlinx.android.synthetic.main.activity_resultados_chequeo.btn_imprimir
 import kotlinx.android.synthetic.main.activity_resultados_chequeo.btn_regresar
 import kotlinx.android.synthetic.main.activity_resultados_chequeo.txt_correo
 import kotlinx.android.synthetic.main.activity_resultados_chequeo.txt_nomina
+import org.json.JSONException
 import org.json.JSONObject
 import java.io.*
 import java.lang.StringBuilder
@@ -133,20 +135,37 @@ class ActivityResultadosChequeo : AppCompatActivity() {
             txt_nombreUV.setText("$nombre")
         }
         btn_Subir.setOnClickListener {
-            val jsonEntrada = JSONObject()
-            jsonEntrada.put("c_chequeo",c_chequeo)
-            jsonEntrada.put("id_persona",id_persona)
-            jsonEntrada.put("id_carro",id_carro)
-            jsonEntrada.put("id_usuario",idU)
-            jsonEntrada.put("tipo_revision",tipR)
-            jsonEntrada.put("tipo_mantenimiento",tipM)
-            jsonEntrada.put("kilometraje_actual",kmAct)
-            jsonEntrada.put("fecha_actual",fechaActual)
-            jsonEntrada.put("kilometraje_anterior",kmAnt)
-            jsonEntrada.put("fecha_anterior",fechaAnterior)
-            jsonEntrada.put("proxima_revision",proximaR)
-            jsonEntrada.put("observaciones",observaciones)
-            sendRequest(Address.IP + "Auditoriapp/Login/insertarRevisiones.php",jsonEntrada)
+            val builder = AlertDialog.Builder(this@ActivityResultadosChequeo)
+            builder.setTitle("¿Quieres subir al servidor esta Revisión Automovilística?")
+            builder.setCancelable(true)
+            builder.setMessage("Con la siguiente clave: "+ c_chequeo)
+            builder.setNegativeButton("Cancelar", DialogInterface.OnClickListener{
+                    dialog, which ->
+                Toast.makeText(this,"Cancelado",Toast.LENGTH_SHORT).show()
+            })
+            builder.setPositiveButton("Confirmar", DialogInterface.OnClickListener{
+                    dialog, which ->
+                try {
+                    val jsonEntrada = JSONObject()
+                    jsonEntrada.put("c_chequeo",c_chequeo)
+                    jsonEntrada.put("id_persona",id_persona)
+                    jsonEntrada.put("id_carro",id_carro)
+                    jsonEntrada.put("id_usuario",idU)
+                    jsonEntrada.put("tipo_revision",tipR)
+                    jsonEntrada.put("tipo_mantenimiento",tipM)
+                    jsonEntrada.put("kilometraje_actual",kmAct)
+                    jsonEntrada.put("fecha_actual",fechaActual)
+                    jsonEntrada.put("kilometraje_anterior",kmAnt)
+                    jsonEntrada.put("fecha_anterior",fechaAnterior)
+                    jsonEntrada.put("proxima_revision",proximaR)
+                    jsonEntrada.put("observaciones",observaciones)
+                    sendRequest(Address.IP + "Auditoriapp/Login/insertarRevisiones.php",jsonEntrada)
+                }catch (e: JSONException){
+                    e.printStackTrace()
+                    Toast.makeText(this,"No se pudo subir al servidor, intente más tarde",Toast.LENGTH_SHORT).show()
+                }
+            })
+            builder.show()
         }
 
         btn_regresar.setOnClickListener {

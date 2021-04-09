@@ -139,26 +139,26 @@
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
                 />
+
             <EditText
                 android:id="@+id/nomina_ExaAdmin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
-                android:ems="10"
-                android:inputType="text"
                 android:background="@drawable/borde"
+                android:ems="10"
                 android:hint=" Nómina del empleado."
+                android:inputType="text"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
             <Button
                 android:id="@+id/btn_nomina_exAdmin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Buscar"
-                android:onClick="buscarEmpleado"
+                android:onClick="buscarem"
                 android:textColor="@android:color/white"
                 android:background="@drawable/button_rounded"
                 android:layout_marginLeft="3dp"

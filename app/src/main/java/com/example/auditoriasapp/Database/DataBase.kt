@@ -38,7 +38,7 @@ class DataBase(context: Context):SQLiteOpenHelper(context, DATABASE,null,1) {
         )
         db?.execSQL(
             "Create table personaNuevo("+
-                    "id_persona INTEGER PRIMARY KEY AUTOINCREMENT,"+
+                    "id_persona int not null primary key,"+
                     "num_nomina text not null,"+
                     "nombre text,"+
                     "tiponomina text,"+

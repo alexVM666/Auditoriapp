@@ -1,26 +1,34 @@
 package com.example.auditoriasapp
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.SearchView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.example.auditoriasapp.Database.DataBase
 import com.example.auditoriasapp.Volley.VolleySingleton
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_recycler_auditorias.*
+import org.json.JSONException
 import org.json.JSONObject
+import java.util.*
+import kotlin.collections.ArrayList
 
 class RecyclerAuditorias : AppCompatActivity() {
     private lateinit var idU: String
     var claveAudit: String = ""
 
+    private lateinit var Auditorias: MutableList<Auditorias>
     private lateinit var viewAdapter: AuditoriasAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     val auditoriasList: List<Auditorias> = ArrayList()
@@ -44,6 +52,13 @@ class RecyclerAuditorias : AppCompatActivity() {
             adapter = viewAdapter
             addItemDecoration(DividerItemDecoration(this@RecyclerAuditorias,DividerItemDecoration.VERTICAL))
         }
+
+        //Refrescando el recycler view al hacer swipe hacia abajo del recycler view
+        swipeRefreshLayoutAud.setOnRefreshListener {
+            retriveAuditorias()
+            swipeRefreshLayoutAud.isRefreshing = false
+        }
+
         // Metodo para implementar la eliminación de una nomina, cuando el usuario da un onSwiped en el recyclerview
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
             override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
@@ -53,34 +68,151 @@ class RecyclerAuditorias : AppCompatActivity() {
                 val position = viewHolder.adapterPosition
                 val auditor = viewAdapter.getTasks()
                 claveAudit = auditor[position].c_audi
+                val t_audi = auditor[position].t_audi
+                val id_per = auditor[position].idP
+                val id_c = auditor[position].idCar
+                val fecha = auditor[position].fechaa
+                val mot = auditor[position].motorr
+                val carr = auditor[position].carroc
+                val interior = auditor[position].inter
+                val aditam = auditor[position].adit
+                val equipo = auditor[position].equipo
+                val n_confor = auditor[position].n_confor
+                val conclu = auditor[position].conclu
+                val idU = auditor[position].idUs
+                val llantas = auditor[position].llantas
+                val cinturones = auditor[position].cinturones
+                val bolsas = auditor[position].bolsasA
+                val testigos = auditor[position].testigos
                 val admin = DataBase(baseContext)
                 if (admin.Ejecuta("DELETE FROM auditorias WHERE c_auditorias = '$claveAudit'")){
                     retriveAuditorias()
+                    Snackbar.make(rv_auditorias,"Se elimino la Auditoria : "+auditor[position].c_audi,
+                        Snackbar.LENGTH_LONG).setAction("Deshacer", View.OnClickListener {
+                        val sentencia = "INSERT INTO auditorias(c_auditorias,t_auditoria,id_persona,id_carro,fecha,motor,carroceria,interior,aditamentos,equipo_tactico,n_conformidades,conclusion,id_usuario,fechallantas,cinturones,bolsasAire,testigosTablero)" +
+                                " values('$claveAudit','$t_audi','$id_per','$id_c','$fecha','$mot','$carr','$interior','$aditam','$equipo','$n_confor','$conclu','$idU','$llantas','$cinturones','$bolsas','$testigos')"
+                        if (admin.Ejecuta(sentencia)){
+                            Toast.makeText(baseContext,"Se deshizo la acción",Toast.LENGTH_LONG).show()
+                            retriveAuditorias()
+                            admin.close()
+                        }
+                        else{
+                            Toast.makeText(baseContext,"No se pudo deshacer el borrado",Toast.LENGTH_SHORT).show()
+                            admin.close()
+                        }
+                    }).show()
                 }
+                admin.close()
             }
         }).attachToRecyclerView(rv_auditorias)
+
+        //Funcion para buscar dentro del recycler view por nombre
+        val searchView : SearchView = findViewById(R.id.searchViewAud)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return true
+            }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                Auditorias = java.util.ArrayList()
+                var c_audi: String
+                var t_audi: String
+                var idP:String
+                var idC:String
+                var idUS:String
+                var fecha:String
+                var moto:String
+                var carroc:String
+                var int:String
+                var adit:String
+                var equip:String
+                var n_confor:String
+                var concl:String
+                var llantas:String
+                var cint:String
+                var bolsas:String
+                var testigos:String
+                var nomi:String
+                var inven:String
+                var nomU:String
+                var nombre:String
+                if (newText!!.isNotEmpty()){
+                    var search = newText.toLowerCase(Locale.getDefault())
+                    var buscar = viewAdapter.getTasks()
+                    eraserAuditorias()
+                    for (auditoria in buscar){
+                        if (auditoria.inv.toLowerCase(Locale.getDefault()).contains(search)){
+                            c_audi = auditoria.c_audi
+                            t_audi = auditoria.t_audi
+                            idP = auditoria.idP
+                            idC = auditoria.idCar
+                            idUS = auditoria.idUs
+                            fecha = auditoria.fechaa
+                            moto = auditoria.motorr
+                            carroc = auditoria.carroc
+                            int = auditoria.inter
+                            adit = auditoria.adit
+                            equip = auditoria.equipo
+                            n_confor = auditoria.n_confor
+                            concl = auditoria.conclu
+                            llantas = auditoria.llantas
+                            cint = auditoria.cinturones
+                            bolsas = auditoria.bolsasA
+                            testigos = auditoria.testigos
+                            nomi = auditoria.nomi
+                            inven = auditoria.inv
+                            nomU = auditoria.usu
+                            nombre = auditoria.nomb
+                            Auditorias.add(Auditorias(c_audi,t_audi,idP,idC,idUS,fecha,moto,carroc,int,adit,equip,n_confor,concl,llantas,cint,bolsas,testigos,nomi,inven,nomU,nombre))
+                        }
+                        viewAdapter.setTask(Auditorias!!)
+                        rv_auditorias.adapter!!.notifyDataSetChanged()
+                    }
+                }else{
+                    eraserAuditorias()
+                    retriveAuditorias()
+                }
+                return true
+            }
+        })
     }
 
     private fun onItemClickListener(auditorr: Auditorias) {
-        val jsonEntrada = JSONObject()
-        jsonEntrada.put("c_auditorias", auditorr.c_audi)
-        jsonEntrada.put("t_auditoria",auditorr.t_audi)
-        jsonEntrada.put("id_persona",auditorr.idP)
-        jsonEntrada.put("id_carro",auditorr.idCar)
-        jsonEntrada.put("id_usuario",auditorr.idUs)
-        jsonEntrada.put("fecha",auditorr.fechaa)
-        jsonEntrada.put("motor",auditorr.motorr)
-        jsonEntrada.put("carroceria",auditorr.carroc)
-        jsonEntrada.put("interior",auditorr.inter)
-        jsonEntrada.put("aditamentos",auditorr.adit)
-        jsonEntrada.put("equipo_tactico",auditorr.equipo)
-        jsonEntrada.put("n_conformidades",auditorr.n_confor)
-        jsonEntrada.put("conclusion",auditorr.conclu)
-        jsonEntrada.put("fechallantas",auditorr.llantas)
-        jsonEntrada.put("cinturones",auditorr.cinturones)
-        jsonEntrada.put("bolsasAire",auditorr.bolsasA)
-        jsonEntrada.put("testigosTablero",auditorr.testigos)
-        sendRequest(Address.IP + "Auditoriapp/Login/insertarAuditorias.php",jsonEntrada)
+        val builder = AlertDialog.Builder(this@RecyclerAuditorias)
+        builder.setTitle("¿Quieres subir al servidor esta Auditoria?")
+        builder.setCancelable(true)
+        builder.setMessage("Aplicada al vehículo(Núm de Inventario): "+ auditorr.inv)
+        builder.setNegativeButton("Cancelar", DialogInterface.OnClickListener{
+                dialog, which ->
+            Toast.makeText(this,"Cancelado",Toast.LENGTH_SHORT).show()
+        })
+        builder.setPositiveButton("Confirmar", DialogInterface.OnClickListener{
+                dialog, which ->
+            try {
+                val jsonEntrada = JSONObject()
+                jsonEntrada.put("c_auditorias", auditorr.c_audi)
+                jsonEntrada.put("t_auditoria",auditorr.t_audi)
+                jsonEntrada.put("id_persona",auditorr.idP)
+                jsonEntrada.put("id_carro",auditorr.idCar)
+                jsonEntrada.put("id_usuario",auditorr.idUs)
+                jsonEntrada.put("fecha",auditorr.fechaa)
+                jsonEntrada.put("motor",auditorr.motorr)
+                jsonEntrada.put("carroceria",auditorr.carroc)
+                jsonEntrada.put("interior",auditorr.inter)
+                jsonEntrada.put("aditamentos",auditorr.adit)
+                jsonEntrada.put("equipo_tactico",auditorr.equipo)
+                jsonEntrada.put("n_conformidades",auditorr.n_confor)
+                jsonEntrada.put("conclusion",auditorr.conclu)
+                jsonEntrada.put("fechallantas",auditorr.llantas)
+                jsonEntrada.put("cinturones",auditorr.cinturones)
+                jsonEntrada.put("bolsasAire",auditorr.bolsasA)
+                jsonEntrada.put("testigosTablero",auditorr.testigos)
+                sendRequest(Address.IP + "Auditoriapp/Login/insertarAuditorias.php",jsonEntrada)
+            }catch (e: JSONException){
+                e.printStackTrace()
+                Toast.makeText(this,"No se pudo subir al servidor, intente más tarde",Toast.LENGTH_SHORT).show()
+            }
+        })
+        builder.show()
     }
 
 
@@ -130,6 +262,16 @@ class RecyclerAuditorias : AppCompatActivity() {
         return audis
     }
 
+    private fun eraserAuditorias(){
+        val audi = erase()
+        viewAdapter.setTask(audi!!)
+    }
+    fun erase():MutableList<Auditorias>{
+        var audii : MutableList<Auditorias> = java.util.ArrayList()
+        audii.clear()
+        return audii
+    }
+
     private fun finalizarAu(){
         val finalizarUN = Intent(this,menuActivity::class.java)
         startActivity(finalizarUN)
@@ -139,12 +281,12 @@ class RecyclerAuditorias : AppCompatActivity() {
     fun sendRequest( wsURL: String, jsonEntrada: JSONObject){
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.POST, wsURL,jsonEntrada,
-            Response.Listener { response ->
+            { response ->
                 val succ = response["success"]
                 val msg = response["message"]
                 Toast.makeText(this, "Success:${succ}  Message:${msg}", Toast.LENGTH_SHORT).show()
             },
-            Response.ErrorListener{ error ->
+            { error ->
                 Toast.makeText(this, "${error.message}", Toast.LENGTH_SHORT).show()
                 Log.d("ERROR","${error.message}");
                 Toast.makeText(this, "Error, por favor checa URL", Toast.LENGTH_SHORT).show()

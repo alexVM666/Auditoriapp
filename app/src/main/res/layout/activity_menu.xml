@@ -6,48 +6,6 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".menuActivity">
-
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        app:fab_addButtonSize="normal"
-        android:layout_margin="25dp"
-        app:fab_addButtonColorNormal="@color/colorPrimaryDark"
-        app:fab_labelStyle="@style/custom_floating_buttons">
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/aud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="auditorias"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_icon="@drawable/auditorias"
-            app:fab_title="Auditorias.">
-        </com.getbase.floatingactionbutton.FloatingActionButton>
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_icon="@drawable/cuestionarios"
-            app:fab_title="Cuestionarios."
-            android:onClick="examenes"
-            android:id="@+id/exa"
-            app:fab_colorNormal="@color/colorPrimary">
-        </com.getbase.floatingactionbutton.FloatingActionButton>
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/results"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/colorPrimary"
-            android:onClick="resultados"
-            app:fab_icon="@drawable/resultados"
-            app:fab_title="Resultados.">
-        </com.getbase.floatingactionbutton.FloatingActionButton>
-
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -84,7 +42,7 @@
         android:scaleType="centerInside"
         android:layout_below="@+id/textView2"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/volanteconcorazon"
+        app:srcCompat="@drawable/escudocelaya"
         />
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
@@ -124,6 +82,47 @@
             app:fab_colorNormal="@color/rosa_claro"
             app:fab_title="Agregar Usuarios.">
         </com.getbase.floatingactionbutton.FloatingActionButton>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:fab_addButtonSize="normal"
+        app:fab_labelsPosition="left"
+        android:layout_margin="25dp"
+        app:fab_addButtonColorNormal="@color/colorPrimaryDark"
+        app:fab_labelStyle="@style/custom_floating_buttons">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/aud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="auditorias"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_icon="@drawable/auditorias"
+            app:fab_title="Auditorias.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/cuestionarios"
+            app:fab_title="Cuestionarios."
+            android:onClick="examenes"
+            android:id="@+id/exa"
+            app:fab_colorNormal="@color/colorPrimary">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            android:onClick="resultados"
+            app:fab_icon="@drawable/resultados"
+            app:fab_title="Resultados.">
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>
 

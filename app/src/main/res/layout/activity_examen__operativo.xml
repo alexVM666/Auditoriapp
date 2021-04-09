@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bloque 1 contiene: 15 reactivos con base en el Manual de Conductor y Prevención de accidentes de la Policía Federal."
+                android:text="Bloque 1 contiene: 14 reactivos con base en el Manual de Conductor y Prevención de accidentes de la Policía Federal."
                 android:fontFamily="sans-serif-black"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
@@ -564,7 +564,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10.	¿Como evitar un choque con el vehículo de adelante?"
+                android:text="10.	¿Requisitos para la conducción de un vehículo?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -585,7 +585,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta10op"
                     android:textColor="@android:color/black"
-                    android:text="A. Estar alerta, anticiparse a la situación, mantenerse cerca y comience a detenerse antes."
+                    android:text="A. Llevar refacción, no debe de traer revista mecánica."
                     />
                 <RadioButton
                     android:id="@+id/Pre10Op2ExaOpera"
@@ -595,7 +595,7 @@
                     android:onClick="Pregunta10op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Manténgase alerta, anticípese a la situación, Manténgase retirado y comience a detenerse antes."
+                    android:text="B. Extinguidor, refacción, cambio de aceite, revista mecánica."
                     />
                 <RadioButton
                     android:id="@+id/Pre10Op3ExaOpera"
@@ -605,7 +605,7 @@
                     android:onClick="Pregunta10op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Evitar conducir para prevenir cualquier siniestro vehicular."
+                    android:text="C. Verificación, revista mecánica, herramienta y refacción, extinguidor, placa vigente y engomado."
                     />
                 <RadioButton
                     android:id="@+id/Pre10Op4ExaOpera"
@@ -615,13 +615,13 @@
                     android:onClick="Pregunta10op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Estar alerta, comenzar a detenerse antes para evitar un choque."
+                    android:text="D. Revista mecánica, extinguidor, uso del celular, placa vigente y engomado."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.	¿Requisitos para la conducción de un vehículo?"
+                android:text="11.	¿Cómo realiza la inspección preoperacional de un vehículo?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -642,7 +642,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta11op"
                     android:textColor="@android:color/black"
-                    android:text="A. Llevar refacción, no debe de traer revista mecánica."
+                    android:text="A. Subirse al vehículo y checar el nivel de agua."
                     />
                 <RadioButton
                     android:id="@+id/Pre11Op2ExaOpera"
@@ -652,7 +652,7 @@
                     android:onClick="Pregunta11op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Extinguidor, refacción, cambio de aceite, revista mecánica."
+                    android:text="B. Checar el agua, aire y luces."
                     />
                 <RadioButton
                     android:id="@+id/Pre11Op3ExaOpera"
@@ -662,7 +662,7 @@
                     android:onClick="Pregunta11op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Verificación, revista mecánica, herramienta y refacción, extinguidor, placa vigente y engomado."
+                    android:text="C. Hacer el cambio de aceite del vehículo."
                     />
                 <RadioButton
                     android:id="@+id/Pre11Op4ExaOpera"
@@ -672,13 +672,13 @@
                     android:onClick="Pregunta11op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Revista mecánica, extinguidor, uso del celular, placa vigente y engomado."
+                    android:text="D. Checar nivel de aire en llantas, aceite, agua y luces."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12.	¿Cómo realiza la inspección preoperacional de un vehículo?"
+                android:text="12.	¿Cuáles son las obligaciones de los conductores?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -699,7 +699,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta12op"
                     android:textColor="@android:color/black"
-                    android:text="A. Subirse al vehículo y checar el nivel de agua."
+                    android:text="A. Uso del cinturón de seguridad, tanto del conductor como del pasajero en todo momento."
                     />
                 <RadioButton
                     android:id="@+id/Pre12Op2ExaOpera"
@@ -709,7 +709,7 @@
                     android:onClick="Pregunta12op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Checar el agua, aire y luces."
+                    android:text="B. Uso del cinturón de seguridad solamente del conductor y copiloto en todo momento."
                     />
                 <RadioButton
                     android:id="@+id/Pre12Op3ExaOpera"
@@ -719,7 +719,7 @@
                     android:onClick="Pregunta12op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Hacer el cambio de aceite del vehículo."
+                    android:text="C. Uso del cinturón de seguridad, tanto del conductor como del pasajero a veces."
                     />
                 <RadioButton
                     android:id="@+id/Pre12Op4ExaOpera"
@@ -729,13 +729,13 @@
                     android:onClick="Pregunta12op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Checar nivel de aire en llantas, aceite, agua y luces."
+                    android:text="D. Uso del cinturón solo en zona peligrosa."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="13.	¿Cuáles son las obligaciones de los conductores?"
+                android:text="13.	¿Cuáles son las recomendaciones ante emergencia si los frenos fallan?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -756,7 +756,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta13op"
                     android:textColor="@android:color/black"
-                    android:text="A. Uso del cinturón de seguridad, tanto del conductor como del pasajero en todo momento."
+                    android:text="A. Usar el freno de mano de manera progresiva, cambiar a una velocidad menor, si fuera precisó, desvíe el vehículo fuera de la calzada."
                     />
                 <RadioButton
                     android:id="@+id/Pre13Op2ExaOpera"
@@ -766,7 +766,7 @@
                     android:onClick="Pregunta13op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Uso del cinturón de seguridad solamente del conductor y copiloto en todo momento."
+                    android:text="B. Usar el freno de mano de manera progresiva, cambiar a una velocidad mayor. "
                     />
                 <RadioButton
                     android:id="@+id/Pre13Op3ExaOpera"
@@ -776,7 +776,7 @@
                     android:onClick="Pregunta13op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Uso del cinturón de seguridad, tanto del conductor como del pasajero a veces."
+                    android:text="C. Usar el freno de mano y cambiar de velocidad espontáneamente."
                     />
                 <RadioButton
                     android:id="@+id/Pre13Op4ExaOpera"
@@ -786,13 +786,13 @@
                     android:onClick="Pregunta13op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Uso del cinturón solo en zona peligrosa."
+                    android:text="D. Usar el freno de mano de manera progresiva y ubicar el vehículo hacia la calzada."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14.	¿Cuáles son las recomendaciones ante emergencia si los frenos fallan?"
+                android:text="14.	¿Qué hacer si el vehículo patina?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -813,7 +813,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta14op"
                     android:textColor="@android:color/black"
-                    android:text="A. Usar el freno de mano de manera progresiva, cambiar a una velocidad menor, si fuera precisó, desvíe el vehículo fuera de la calzada."
+                    android:text="A. Mantener la calma, evitar pisar el freno, soltar el volante."
                     />
                 <RadioButton
                     android:id="@+id/Pre14Op2ExaOpera"
@@ -823,7 +823,7 @@
                     android:onClick="Pregunta14op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Usar el freno de mano de manera progresiva, cambiar a una velocidad mayor. "
+                    android:text="B. No pise el freno, no levantar el pie del acelerador, gira el volante en la misma dirección que lleva en las llantas, tan pronto como el vehículo se vuelva a enderezar contra volantes, afloja la presión del pedal del acelerador, por último, frena suavemente."
                     />
                 <RadioButton
                     android:id="@+id/Pre14Op3ExaOpera"
@@ -833,7 +833,7 @@
                     android:onClick="Pregunta14op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Usar el freno de mano y cambiar de velocidad espontáneamente."
+                    android:text="C. No pise el freno, girar el volante en la misma dirección que las llantas."
                     />
                 <RadioButton
                     android:id="@+id/Pre14Op4ExaOpera"
@@ -841,63 +841,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:onClick="Pregunta14op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="D. Usar el freno de mano de manera progresiva y ubicar el vehículo hacia la calzada."
-                    />
-            </RadioGroup>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15.	¿Qué hacer si el vehículo patina?"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                />
-            <RadioGroup
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/Pre15Op1ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta15op"
-                    android:textColor="@android:color/black"
-                    android:text="A. Mantener la calma, evitar pisar el freno, soltar el volante."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre15Op2ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta15op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="B. No pise el freno, no levantar el pie del acelerador, gira el volante en la misma dirección que lleva en las llantas, tan pronto como el vehículo se vuelva a enderezar contra volantes, afloja la presión del pedal del acelerador, por último, frena suavemente."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre15Op3ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta15op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="C. No pise el freno, girar el volante en la misma dirección que las llantas."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre15Op4ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta15op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
                     android:text="D. No pise el freno, enderezar las llantas, acelerar repentinamente y evité pisar el freno."
@@ -918,7 +861,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="16.	¿A quién va dirigido el reglamento de tránsito y policía vial para el municipio de Celaya?"
+                android:text="15.	¿A quién va dirigido el reglamento de tránsito y policía vial para el municipio de Celaya?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -933,40 +876,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:id="@+id/Pre16Op1ExaOpera"
+                    android:id="@+id/Pre15Op1ExaOpera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:onClick="Pregunta16op"
+                    android:onClick="Pregunta15op"
                     android:textColor="@android:color/black"
                     android:text="A. Para la toda la ciudadanía y autoridades municipales. "
                     />
                 <RadioButton
-                    android:id="@+id/Pre16Op2ExaOpera"
+                    android:id="@+id/Pre15Op2ExaOpera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:onClick="Pregunta16op"
+                    android:onClick="Pregunta15op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
                     android:text="B. Para todos los servidores públicos en general."
                     />
                 <RadioButton
-                    android:id="@+id/Pre16Op3ExaOpera"
+                    android:id="@+id/Pre15Op3ExaOpera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:onClick="Pregunta16op"
+                    android:onClick="Pregunta15op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
                     android:text="C. Para las autoridades municipales."
                     />
                 <RadioButton
-                    android:id="@+id/Pre16Op4ExaOpera"
+                    android:id="@+id/Pre15Op4ExaOpera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:onClick="Pregunta16op"
+                    android:onClick="Pregunta15op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
                     android:text="D. Solo para la ciudadanía."
@@ -986,10 +929,67 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="17.	¿Qué documento deberán tener habilitado y permitido las personas que manejen vehículos de motor?"
+                android:text="16.	¿Qué documento deberán tener habilitado y permitido las personas que manejen vehículos de motor?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <RadioGroup
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/Pre16Op1ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta16op"
+                    android:textColor="@android:color/black"
+                    android:text="A. Licencia de conducir."
+                    />
+                <RadioButton
+                    android:id="@+id/Pre16Op2ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta16op"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="B. Licencia de conducir y/o permiso de conducir."
+                    />
+                <RadioButton
+                    android:id="@+id/Pre16Op3ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta16op"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="C. Verificación vehicular."
+                    />
+                <RadioButton
+                    android:id="@+id/Pre16Op4ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta16op"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="D. Permiso de conducir."
+                    />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17.	¿Qué artículo prohíbe conducir bajo los efectos del alcohol y/o sustancias psicotrópicas?"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 />
@@ -1007,7 +1007,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta17op"
                     android:textColor="@android:color/black"
-                    android:text="A. Licencia de conducir."
+                    android:text="A. El artículo 89 del reglamento de tránsito y policía vial de Celaya."
                     />
                 <RadioButton
                     android:id="@+id/Pre17Op2ExaOpera"
@@ -1017,7 +1017,7 @@
                     android:onClick="Pregunta17op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Licencia de conducir y/o permiso de conducir."
+                    android:text="B. El artículo 110 del reglamento de tránsito y policía vial de Celaya."
                     />
                 <RadioButton
                     android:id="@+id/Pre17Op3ExaOpera"
@@ -1027,7 +1027,7 @@
                     android:onClick="Pregunta17op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Verificación vehicular."
+                    android:text="C. El artículo 91 del reglamento de tránsito y policía vial de Celaya."
                     />
                 <RadioButton
                     android:id="@+id/Pre17Op4ExaOpera"
@@ -1037,13 +1037,24 @@
                     android:onClick="Pregunta17op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Permiso de conducir."
+                    android:text="D. El artículo 120 del reglamento de tránsito y policía vial de Celaya."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="18.	¿Qué artículo prohíbe conducir bajo los efectos del alcohol y/o sustancias psicotrópicas?"
+                android:text="De acuerdo con el articulo 3."
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18.	¿Cuál es la jerarquía de derecho de movilidad preferente para ceder paso?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1064,7 +1075,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta18op"
                     android:textColor="@android:color/black"
-                    android:text="A. El artículo 89 del reglamento de tránsito y policía vial de Celaya."
+                    android:text="A. Peatones, transporte, ciclistas, maquinaría pesadas, vehículos particulares."
                     />
                 <RadioButton
                     android:id="@+id/Pre18Op2ExaOpera"
@@ -1074,7 +1085,7 @@
                     android:onClick="Pregunta18op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. El artículo 110 del reglamento de tránsito y policía vial de Celaya."
+                    android:text="B. Peatones, ciclistas, Transporte, vehículos particulares, maquinaria pesada."
                     />
                 <RadioButton
                     android:id="@+id/Pre18Op3ExaOpera"
@@ -1084,7 +1095,7 @@
                     android:onClick="Pregunta18op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. El artículo 91 del reglamento de tránsito y policía vial de Celaya."
+                    android:text="C. Ciclistas, peatones, Transporte, maquinaria pesada, vehículos particulares."
                     />
                 <RadioButton
                     android:id="@+id/Pre18Op4ExaOpera"
@@ -1094,24 +1105,13 @@
                     android:onClick="Pregunta18op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. El artículo 120 del reglamento de tránsito y policía vial de Celaya."
+                    android:text="D. Peatones, ciclistas, maquinaria pesada, transporte, vehículos particulares."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="De acuerdo con el articulo 3."
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textAllCaps="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="19.	¿Cuál es la jerarquía de derecho de movilidad preferente para ceder paso?"
+                android:text="19.	¿Cuál es el peso límite de los vehículos que se clasifican como peso ligero? "
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1132,7 +1132,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta19op"
                     android:textColor="@android:color/black"
-                    android:text="A. Peatones, transporte, ciclistas, maquinaría pesadas, vehículos particulares."
+                    android:text="A. De 4 toneladas de peso bruto."
                     />
                 <RadioButton
                     android:id="@+id/Pre19Op2ExaOpera"
@@ -1142,7 +1142,7 @@
                     android:onClick="Pregunta19op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Peatones, ciclistas, Transporte, vehículos particulares, maquinaria pesada."
+                    android:text="B. De 3.5 toneladas o menos en peso bruto."
                     />
                 <RadioButton
                     android:id="@+id/Pre19Op3ExaOpera"
@@ -1152,7 +1152,7 @@
                     android:onClick="Pregunta19op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Ciclistas, peatones, Transporte, maquinaria pesada, vehículos particulares."
+                    android:text="C. Mas de 3.5 toneladas en peso bruto."
                     />
                 <RadioButton
                     android:id="@+id/Pre19Op4ExaOpera"
@@ -1162,13 +1162,24 @@
                     android:onClick="Pregunta19op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Peatones, ciclistas, maquinaria pesada, transporte, vehículos particulares."
+                    android:text="D. De 1 tonelada o menos en peso bruto."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20.	¿Cuál es el peso límite de los vehículos que se clasifican como peso ligero? "
+                android:text="Según el articulo 102 del reglamento de tránsito y policia vial."
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.	¿Qué facultades tiene la policía vial para garantizar el cumplimiento de las sanciones?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1189,7 +1200,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta20op"
                     android:textColor="@android:color/black"
-                    android:text="A. De 4 toneladas de peso bruto."
+                    android:text="A. Retención de documentos, encierro de vehículos, inmovilización de vehículos."
                     />
                 <RadioButton
                     android:id="@+id/Pre20Op2ExaOpera"
@@ -1199,7 +1210,7 @@
                     android:onClick="Pregunta20op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. De 3.5 toneladas o menos en peso bruto."
+                    android:text="B. Inmovilización de vehículos, retención de documentos."
                     />
                 <RadioButton
                     android:id="@+id/Pre20Op3ExaOpera"
@@ -1209,7 +1220,7 @@
                     android:onClick="Pregunta20op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Mas de 3.5 toneladas en peso bruto."
+                    android:text="C. Retención de documentos, encierro de vehículos."
                     />
                 <RadioButton
                     android:id="@+id/Pre20Op4ExaOpera"
@@ -1219,24 +1230,13 @@
                     android:onClick="Pregunta20op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. De 1 tonelada o menos en peso bruto."
+                    android:text="D. Inmovilización de vehículos."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Según el articulo 102 del reglamento de tránsito y policia vial."
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textAllCaps="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="21.	¿Qué facultades tiene la policía vial para garantizar el cumplimiento de las sanciones?"
+                android:text="21.	¿Cuáles son los vehículos que se clasifican como peso ligero? "
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1257,7 +1257,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta21op"
                     android:textColor="@android:color/black"
-                    android:text="A. Retención de documentos, encierro de vehículos, inmovilización de vehículos."
+                    android:text="A. Motocicletas, autobuses, tractores."
                     />
                 <RadioButton
                     android:id="@+id/Pre21Op2ExaOpera"
@@ -1267,7 +1267,7 @@
                     android:onClick="Pregunta21op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Inmovilización de vehículos, retención de documentos."
+                    android:text="B. Vehículos agrícolas, camionetas, bicimotos."
                     />
                 <RadioButton
                     android:id="@+id/Pre21Op3ExaOpera"
@@ -1277,7 +1277,7 @@
                     android:onClick="Pregunta21op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Retención de documentos, encierro de vehículos."
+                    android:text="C. Tractores, automóviles vehículos agrícolas."
                     />
                 <RadioButton
                     android:id="@+id/Pre21Op4ExaOpera"
@@ -1287,13 +1287,13 @@
                     android:onClick="Pregunta21op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Inmovilización de vehículos."
+                    android:text="D. Bicicletas, motocicletas, automóviles."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="22.	¿Cuáles son los vehículos que se clasifican como peso ligero? "
+                android:text="22.  ¿Cuál es el máximo de velocidad para transitar por vías secundarias (calles o avenidas)? "
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1314,7 +1314,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta22op"
                     android:textColor="@android:color/black"
-                    android:text="A. Motocicletas, autobuses, tractores."
+                    android:text="A. Máximo 50 kilómetros por hora."
                     />
                 <RadioButton
                     android:id="@+id/Pre22Op2ExaOpera"
@@ -1324,7 +1324,7 @@
                     android:onClick="Pregunta22op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Vehículos agrícolas, camionetas, bicimotos."
+                    android:text="B. Máximo 30 kilómetros por hora. "
                     />
                 <RadioButton
                     android:id="@+id/Pre22Op3ExaOpera"
@@ -1334,7 +1334,7 @@
                     android:onClick="Pregunta22op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Tractores, automóviles vehículos agrícolas."
+                    android:text="C. Máximo 40 kilómetros por hora."
                     />
                 <RadioButton
                     android:id="@+id/Pre22Op4ExaOpera"
@@ -1344,13 +1344,13 @@
                     android:onClick="Pregunta22op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Bicicletas, motocicletas, automóviles."
+                    android:text="D. Máximo 50 kilómetros por hora."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23.  ¿Cuál es el máximo de velocidad para transitar por vías secundarias (calles o avenidas)? "
+                android:text="23.	¿Qué artículo prohíbe la obstrucción total o parcial de una vialidad?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1371,7 +1371,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta23op"
                     android:textColor="@android:color/black"
-                    android:text="A. Máximo 50 kilómetros por hora."
+                    android:text="A. Artículo 19 del reglamento de tránsito y policía vial."
                     />
                 <RadioButton
                     android:id="@+id/Pre23Op2ExaOpera"
@@ -1381,7 +1381,7 @@
                     android:onClick="Pregunta23op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Máximo 30 kilómetros por hora. "
+                    android:text="B. Artículo 34 del reglamento de tránsito y policía vial."
                     />
                 <RadioButton
                     android:id="@+id/Pre23Op3ExaOpera"
@@ -1391,7 +1391,7 @@
                     android:onClick="Pregunta23op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Máximo 40 kilómetros por hora."
+                    android:text="C. Artículo 25 del reglamento de tránsito y policía vial."
                     />
                 <RadioButton
                     android:id="@+id/Pre23Op4ExaOpera"
@@ -1401,13 +1401,13 @@
                     android:onClick="Pregunta23op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Máximo 50 kilómetros por hora."
+                    android:text="D. Artículo 89 del reglamento de tránsito y policía vial."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24.	¿Qué artículo prohíbe la obstrucción total o parcial de una vialidad?"
+                android:text="24.	¿Cuál es el máximo de velocidad para transitar en zonas escolares y hospitales?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1428,7 +1428,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta24op"
                     android:textColor="@android:color/black"
-                    android:text="A. Artículo 19 del reglamento de tránsito y policía vial."
+                    android:text="A. Máximo 50 kilómetros."
                     />
                 <RadioButton
                     android:id="@+id/Pre24Op2ExaOpera"
@@ -1438,7 +1438,7 @@
                     android:onClick="Pregunta24op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Artículo 34 del reglamento de tránsito y policía vial."
+                    android:text="B. Máximo 40 kilómetros."
                     />
                 <RadioButton
                     android:id="@+id/Pre24Op3ExaOpera"
@@ -1448,7 +1448,7 @@
                     android:onClick="Pregunta24op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Artículo 25 del reglamento de tránsito y policía vial."
+                    android:text="C. Máximo 30 kilómetros."
                     />
                 <RadioButton
                     android:id="@+id/Pre24Op4ExaOpera"
@@ -1456,63 +1456,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:onClick="Pregunta24op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="D. Artículo 89 del reglamento de tránsito y policía vial."
-                    />
-            </RadioGroup>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="25.	¿Cuál es el máximo de velocidad para transitar en zonas escolares y hospitales?"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                />
-            <RadioGroup
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/Pre25Op1ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta25op"
-                    android:textColor="@android:color/black"
-                    android:text="A. Máximo 50 kilómetros."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre25Op2ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta25op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="B. Máximo 40 kilómetros."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre25Op3ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta25op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="C. Máximo 30 kilómetros."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre25Op4ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta25op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
                     android:text="D. Máximo 20 kilómetros."
@@ -1533,7 +1476,64 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="26.	¿Quiénes están obligados a cumplir el reglamento para el uso y control de vehículos oficiales del municipio de Celaya?"
+                android:text="25.	¿Quiénes están obligados a cumplir el reglamento para el uso y control de vehículos oficiales del municipio de Celaya?"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+            <RadioGroup
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/Pre25Op1ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta25op"
+                    android:textColor="@android:color/black"
+                    android:text="A. Para todos los servidores públicos en general."
+                    />
+                <RadioButton
+                    android:id="@+id/Pre25Op2ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta25op"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="B. Los que usan vehículos."
+                    />
+                <RadioButton
+                    android:id="@+id/Pre25Op3ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta25op"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="C. Para toda la ciudadanía en general."
+                    />
+                <RadioButton
+                    android:id="@+id/Pre25Op4ExaOpera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:onClick="Pregunta25op"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="D. Los Servidores públicos que tengan bajo su cargo o uso vehículos oficiales."
+                    />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26.	De acuerdo con las actividades que se realicen ¿Cómo se clasifican los vehículos?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1554,7 +1554,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta26op"
                     android:textColor="@android:color/black"
-                    android:text="A. Para todos los servidores públicos en general."
+                    android:text="A. Automóviles, bicicleta."
                     />
                 <RadioButton
                     android:id="@+id/Pre26Op2ExaOpera"
@@ -1564,7 +1564,7 @@
                     android:onClick="Pregunta26op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Los que usan vehículos."
+                    android:text="B. Operativos y Administrativos."
                     />
                 <RadioButton
                     android:id="@+id/Pre26Op3ExaOpera"
@@ -1574,7 +1574,7 @@
                     android:onClick="Pregunta26op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Para toda la ciudadanía en general."
+                    android:text="C. Operativos, Automóviles."
                     />
                 <RadioButton
                     android:id="@+id/Pre26Op4ExaOpera"
@@ -1584,13 +1584,13 @@
                     android:onClick="Pregunta26op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Los Servidores públicos que tengan bajo su cargo o uso vehículos oficiales."
+                    android:text="D. Administrativos."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27.	De acuerdo con las actividades que se realicen ¿Cómo se clasifican los vehículos?"
+                android:text="27.	¿Qué pasa si un conductor tiene 2 siniestros en un periodo de 12 meses de los que resulte responsable?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1611,7 +1611,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta27op"
                     android:textColor="@android:color/black"
-                    android:text="A. Automóviles, bicicleta."
+                    android:text="A. Se le perjudica de responsabilidad civil o penal."
                     />
                 <RadioButton
                     android:id="@+id/Pre27Op2ExaOpera"
@@ -1621,7 +1621,7 @@
                     android:onClick="Pregunta27op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Operativos y Administrativos."
+                    android:text="B. Recibirá una llamada de atención."
                     />
                 <RadioButton
                     android:id="@+id/Pre27Op3ExaOpera"
@@ -1631,7 +1631,7 @@
                     android:onClick="Pregunta27op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Operativos, Automóviles."
+                    android:text="C. Está sujeto a responsabilidad administrativa sin perjuicio civil o penal."
                     />
                 <RadioButton
                     android:id="@+id/Pre27Op4ExaOpera"
@@ -1641,13 +1641,13 @@
                     android:onClick="Pregunta27op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Administrativos."
+                    android:text="D. No tendrá ninguna responsabilidad."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="28.	¿Qué pasa si un conductor tiene 2 siniestros en un periodo de 12 meses de los que resulte responsable?"
+                android:text="28.	¿Cuáles son las sanciones por uso inadecuado o irregularidades aplicadas por Oficialá Mayor?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1668,7 +1668,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta28op"
                     android:textColor="@android:color/black"
-                    android:text="A. Se le perjudica de responsabilidad civil o penal."
+                    android:text="A. Advertencia, Suspensión, destitución."
                     />
                 <RadioButton
                     android:id="@+id/Pre28Op2ExaOpera"
@@ -1678,7 +1678,7 @@
                     android:onClick="Pregunta28op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Recibirá una llamada de atención."
+                    android:text="B. Advertencia, suspensión y sanción."
                     />
                 <RadioButton
                     android:id="@+id/Pre28Op3ExaOpera"
@@ -1688,7 +1688,7 @@
                     android:onClick="Pregunta28op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Está sujeto a responsabilidad administrativa sin perjuicio civil o penal."
+                    android:text="C. Advertencia, suspensión, destitución del puesto, sanción económica."
                     />
                 <RadioButton
                     android:id="@+id/Pre28Op4ExaOpera"
@@ -1698,13 +1698,13 @@
                     android:onClick="Pregunta28op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. No tendrá ninguna responsabilidad."
+                    android:text="D. Suspensión, destitución del puesto, sanción económica."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="29.	¿Cuáles son las sanciones por uso inadecuado o irregularidades aplicadas por Oficialá Mayor?"
+                android:text="29.	¿Cuántos días se sanciona al conductor por uso irregular o inadecuada de conducción?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1725,7 +1725,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta29op"
                     android:textColor="@android:color/black"
-                    android:text="A. Advertencia, Suspensión, destitución."
+                    android:text="A. De 3 a 20 días sin goce de sueldo."
                     />
                 <RadioButton
                     android:id="@+id/Pre29Op2ExaOpera"
@@ -1735,7 +1735,7 @@
                     android:onClick="Pregunta29op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Advertencia, suspensión y sanción."
+                    android:text="B. De 4 a 25 días sin goce de sueldo."
                     />
                 <RadioButton
                     android:id="@+id/Pre29Op3ExaOpera"
@@ -1745,7 +1745,7 @@
                     android:onClick="Pregunta29op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Advertencia, suspensión, destitución del puesto, sanción económica."
+                    android:text="C. De 2 a 30 días sin goce de sueldo."
                     />
                 <RadioButton
                     android:id="@+id/Pre29Op4ExaOpera"
@@ -1755,13 +1755,13 @@
                     android:onClick="Pregunta29op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Suspensión, destitución del puesto, sanción económica."
+                    android:text="D. De 3 a 30 días sin goce de sueldo."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="30.	¿Cuántos días se sanciona al conductor por uso irregular o inadecuada de conducción?"
+                android:text="30.	¿Qué tipo de vehículos se pueden utilizar en actividades oficiales sin restricciones de días ni horarios?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1782,7 +1782,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta30op"
                     android:textColor="@android:color/black"
-                    android:text="A. De 3 a 20 días sin goce de sueldo."
+                    android:text="A. Los vehículos de tipo operativo."
                     />
                 <RadioButton
                     android:id="@+id/Pre30Op2ExaOpera"
@@ -1792,7 +1792,7 @@
                     android:onClick="Pregunta30op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. De 4 a 25 días sin goce de sueldo."
+                    android:text="B. Los vehículos de tipo administrativo."
                     />
                 <RadioButton
                     android:id="@+id/Pre30Op3ExaOpera"
@@ -1802,7 +1802,7 @@
                     android:onClick="Pregunta30op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. De 2 a 30 días sin goce de sueldo."
+                    android:text="C. Los vehículos de tipo operativo y administrativo."
                     />
                 <RadioButton
                     android:id="@+id/Pre30Op4ExaOpera"
@@ -1812,13 +1812,13 @@
                     android:onClick="Pregunta30op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. De 3 a 30 días sin goce de sueldo."
+                    android:text="D. Todos los anteriores."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="31.	¿Qué tipo de vehículos se pueden utilizar en actividades oficiales sin restricciones de días ni horarios?"
+                android:text="31.	¿Qué dependencia se encarga del suministro de combustible para la operación de los vehículos oficiales?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1839,7 +1839,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta31op"
                     android:textColor="@android:color/black"
-                    android:text="A. Los vehículos de tipo operativo."
+                    android:text="A. Secretaria de Ayuntamiento."
                     />
                 <RadioButton
                     android:id="@+id/Pre31Op2ExaOpera"
@@ -1849,7 +1849,7 @@
                     android:onClick="Pregunta31op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Los vehículos de tipo administrativo."
+                    android:text="B. Oficialía Mayor."
                     />
                 <RadioButton
                     android:id="@+id/Pre31Op3ExaOpera"
@@ -1859,7 +1859,7 @@
                     android:onClick="Pregunta31op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Los vehículos de tipo operativo y administrativo."
+                    android:text="C. Tesorería municipal."
                     />
                 <RadioButton
                     android:id="@+id/Pre31Op4ExaOpera"
@@ -1869,13 +1869,13 @@
                     android:onClick="Pregunta31op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Todos los anteriores."
+                    android:text="D. Desarrollo Social."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="32.	¿Qué dependencia se encarga del suministro de combustible para la operación de los vehículos oficiales?"
+                android:text="32.	En caso de tener un accidente ¿qué debe hacer el conductor?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1896,7 +1896,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta32op"
                     android:textColor="@android:color/black"
-                    android:text="A. Secretaria de Ayuntamiento."
+                    android:text="A. No abandonar el vehículo bajo ninguna circunstancia."
                     />
                 <RadioButton
                     android:id="@+id/Pre32Op2ExaOpera"
@@ -1906,7 +1906,7 @@
                     android:onClick="Pregunta32op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. Oficialía Mayor."
+                    android:text="B. No abandonar el vehículo hasta la intervención de autoridades competentes."
                     />
                 <RadioButton
                     android:id="@+id/Pre32Op3ExaOpera"
@@ -1916,7 +1916,7 @@
                     android:onClick="Pregunta32op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Tesorería municipal."
+                    android:text="C. Deberá abandonar el vehículo de inmediato."
                     />
                 <RadioButton
                     android:id="@+id/Pre32Op4ExaOpera"
@@ -1926,13 +1926,13 @@
                     android:onClick="Pregunta32op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Desarrollo Social."
+                    android:text="D. Llamarle a un amigo y pedirle ayuda de inmediato."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="33.	En caso de tener un accidente ¿qué debe hacer el conductor?"
+                android:text="33.	¿En qué casos debe abandonar el vehículo el conductor?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -1953,7 +1953,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta33op"
                     android:textColor="@android:color/black"
-                    android:text="A. No abandonar el vehículo bajo ninguna circunstancia."
+                    android:text="A. Solo en caso de tener lesiones."
                     />
                 <RadioButton
                     android:id="@+id/Pre33Op2ExaOpera"
@@ -1963,7 +1963,7 @@
                     android:onClick="Pregunta33op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. No abandonar el vehículo hasta la intervención de autoridades competentes."
+                    android:text="B. En caso de poner en riesgo la seguridad, integridad y/o lesiones que ameriten inmediata atención médica."
                     />
                 <RadioButton
                     android:id="@+id/Pre33Op3ExaOpera"
@@ -1973,7 +1973,7 @@
                     android:onClick="Pregunta33op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Deberá abandonar el vehículo de inmediato."
+                    android:text="C. Solo en caso de poner en riesgo la seguridad."
                     />
                 <RadioButton
                     android:id="@+id/Pre33Op4ExaOpera"
@@ -1983,13 +1983,13 @@
                     android:onClick="Pregunta33op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="D. Llamarle a un amigo y pedirle ayuda de inmediato."
+                    android:text="D. Solo en caso de tener lesiones que ameriten atención medica inmediata."
                     />
             </RadioGroup>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="34.	¿En qué casos debe abandonar el vehículo el conductor?"
+                android:text="34.	¿Qué dependencia se encarga de evaluar y capacitar a los conductores de vehículos oficiales?"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
@@ -2010,7 +2010,7 @@
                     android:textSize="20sp"
                     android:onClick="Pregunta34op"
                     android:textColor="@android:color/black"
-                    android:text="A. Solo en caso de tener lesiones."
+                    android:text="A. Secretaria de Ayuntamiento."
                     />
                 <RadioButton
                     android:id="@+id/Pre34Op2ExaOpera"
@@ -2020,7 +2020,7 @@
                     android:onClick="Pregunta34op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="B. En caso de poner en riesgo la seguridad, integridad y/o lesiones que ameriten inmediata atención médica."
+                    android:text="B. Oficialía Mayor."
                     />
                 <RadioButton
                     android:id="@+id/Pre34Op3ExaOpera"
@@ -2030,7 +2030,7 @@
                     android:onClick="Pregunta34op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
-                    android:text="C. Solo en caso de poner en riesgo la seguridad."
+                    android:text="C. Tesorería Municipal."
                     />
                 <RadioButton
                     android:id="@+id/Pre34Op4ExaOpera"
@@ -2038,63 +2038,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:onClick="Pregunta34op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="D. Solo en caso de tener lesiones que ameriten atención medica inmediata."
-                    />
-            </RadioGroup>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="35.	¿Qué dependencia se encarga de evaluar y capacitar a los conductores de vehículos oficiales?"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                />
-            <RadioGroup
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/Pre35Op1ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta35op"
-                    android:textColor="@android:color/black"
-                    android:text="A. Secretaria de Ayuntamiento."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre35Op2ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta35op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="B. Oficialía Mayor."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre35Op3ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta35op"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/black"
-                    android:text="C. Tesorería Municipal."
-                    />
-                <RadioButton
-                    android:id="@+id/Pre35Op4ExaOpera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:onClick="Pregunta35op"
                     android:layout_marginTop="10dp"
                     android:textColor="@android:color/black"
                     android:text="D. Desarrollo Social."

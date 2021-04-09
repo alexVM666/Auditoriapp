@@ -29,12 +29,22 @@
                 android:id="@+id/caraResultExOperativo"
                 android:layout_width="280dp"
                 android:layout_height="280dp"
-                android:src="@drawable/bien"
+                android:src="@drawable/masvidasasalvo1"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_below="@+id/tituloResOP"
-                android:layout_centerHorizontal="true"
+                />
+            <ImageView
+                android:id="@+id/caraResultExOperativo2"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:src="@drawable/cheque"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/tituloResOP"
+                android:layout_toEndOf="@+id/caraResultExOperativo"
                 />
 
             <TextView

@@ -79,7 +79,7 @@ class Examen_Operativo : AppCompatActivity() {
     private fun pauseTimer(){
         countdowntimer.cancel()
     }
-
+    //pregunta 1
     fun Pregunta1op(view: View) {
         if (view is RadioButton) {
             val checked = view.isChecked
@@ -124,7 +124,7 @@ class Examen_Operativo : AppCompatActivity() {
             }
         }
     }
-
+    //pregunta 2
     fun Pregunta2op(view: View) {
         if (view is RadioButton) {
             val checked = view.isChecked
@@ -169,6 +169,7 @@ class Examen_Operativo : AppCompatActivity() {
             }
         }
     }
+    //pregunta 3
     fun Pregunta3op(view: View) {
         if (view is RadioButton) {
             val checked = view.isChecked
@@ -477,6 +478,7 @@ class Examen_Operativo : AppCompatActivity() {
             }
         }
     }
+    //Pregunta 10
     fun Pregunta10op(view: View) {
         if (view is RadioButton) {
             val checked = view.isChecked
@@ -492,9 +494,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre10Op2ExaOpera ->
                     if (checked) {
-                        califB1++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre10Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre10Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre10Op1ExaOpera.isEnabled = false
                         Pre10Op2ExaOpera.isEnabled = false
                         Pre10Op3ExaOpera.isEnabled = false
@@ -502,8 +503,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre10Op3ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre10Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB1++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre10Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre10Op1ExaOpera.isEnabled = false
                         Pre10Op2ExaOpera.isEnabled = false
                         Pre10Op3ExaOpera.isEnabled = false
@@ -521,6 +523,7 @@ class Examen_Operativo : AppCompatActivity() {
             }
         }
     }
+    //pregunta 11
     fun Pregunta11op(view: View) {
         if (view is RadioButton) {
             val checked = view.isChecked
@@ -545,9 +548,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre11Op3ExaOpera ->
                     if (checked) {
-                        califB1++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre11Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+                        Pre11Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre11Op1ExaOpera.isEnabled = false
                         Pre11Op2ExaOpera.isEnabled = false
                         Pre11Op3ExaOpera.isEnabled = false
@@ -555,8 +557,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre11Op4ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
-                        Pre11Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB1++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre11Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre11Op1ExaOpera.isEnabled = false
                         Pre11Op2ExaOpera.isEnabled = false
                         Pre11Op3ExaOpera.isEnabled = false
@@ -571,8 +574,9 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre12Op1ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre12Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB1++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre12Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre12Op1ExaOpera.isEnabled = false
                         Pre12Op2ExaOpera.isEnabled = false
                         Pre12Op3ExaOpera.isEnabled = false
@@ -598,9 +602,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre12Op4ExaOpera ->
                     if (checked) {
-                        califB1++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre12Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre12Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre12Op1ExaOpera.isEnabled = false
                         Pre12Op2ExaOpera.isEnabled = false
                         Pre12Op3ExaOpera.isEnabled = false
@@ -659,9 +662,8 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre14Op1ExaOpera ->
                     if (checked) {
-                        califB1++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre14Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+                        Pre14Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre14Op1ExaOpera.isEnabled = false
                         Pre14Op2ExaOpera.isEnabled = false
                         Pre14Op3ExaOpera.isEnabled = false
@@ -669,8 +671,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre14Op2ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre14Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB1++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre14Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre14Op1ExaOpera.isEnabled = false
                         Pre14Op2ExaOpera.isEnabled = false
                         Pre14Op3ExaOpera.isEnabled = false
@@ -703,8 +706,9 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre15Op1ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre15Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre15Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre15Op1ExaOpera.isEnabled = false
                         Pre15Op2ExaOpera.isEnabled = false
                         Pre15Op3ExaOpera.isEnabled = false
@@ -712,9 +716,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre15Op2ExaOpera ->
                     if (checked) {
-                        califB1++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre15Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre15Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre15Op1ExaOpera.isEnabled = false
                         Pre15Op2ExaOpera.isEnabled = false
                         Pre15Op3ExaOpera.isEnabled = false
@@ -747,9 +750,8 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre16Op1ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre16Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre16Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre16Op1ExaOpera.isEnabled = false
                         Pre16Op2ExaOpera.isEnabled = false
                         Pre16Op3ExaOpera.isEnabled = false
@@ -757,8 +759,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre16Op2ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre16Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre16Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre16Op1ExaOpera.isEnabled = false
                         Pre16Op2ExaOpera.isEnabled = false
                         Pre16Op3ExaOpera.isEnabled = false
@@ -791,8 +794,9 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre17Op1ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre17Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre17Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre17Op1ExaOpera.isEnabled = false
                         Pre17Op2ExaOpera.isEnabled = false
                         Pre17Op3ExaOpera.isEnabled = false
@@ -800,9 +804,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre17Op2ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre17Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre17Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre17Op1ExaOpera.isEnabled = false
                         Pre17Op2ExaOpera.isEnabled = false
                         Pre17Op3ExaOpera.isEnabled = false
@@ -835,9 +838,8 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre18Op1ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre18Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre18Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre18Op1ExaOpera.isEnabled = false
                         Pre18Op2ExaOpera.isEnabled = false
                         Pre18Op3ExaOpera.isEnabled = false
@@ -845,8 +847,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre18Op2ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre18Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre18Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre18Op1ExaOpera.isEnabled = false
                         Pre18Op2ExaOpera.isEnabled = false
                         Pre18Op3ExaOpera.isEnabled = false
@@ -923,8 +926,9 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre20Op1ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre20Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre20Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre20Op1ExaOpera.isEnabled = false
                         Pre20Op2ExaOpera.isEnabled = false
                         Pre20Op3ExaOpera.isEnabled = false
@@ -932,9 +936,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre20Op2ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre20Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre20Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre20Op1ExaOpera.isEnabled = false
                         Pre20Op2ExaOpera.isEnabled = false
                         Pre20Op3ExaOpera.isEnabled = false
@@ -967,9 +970,8 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre21Op1ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre21Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre21Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre21Op1ExaOpera.isEnabled = false
                         Pre21Op2ExaOpera.isEnabled = false
                         Pre21Op3ExaOpera.isEnabled = false
@@ -995,8 +997,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre21Op4ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre21Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre21Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre21Op1ExaOpera.isEnabled = false
                         Pre21Op2ExaOpera.isEnabled = false
                         Pre21Op3ExaOpera.isEnabled = false
@@ -1029,8 +1032,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre22Op3ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
-                        Pre22Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre22Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre22Op1ExaOpera.isEnabled = false
                         Pre22Op2ExaOpera.isEnabled = false
                         Pre22Op3ExaOpera.isEnabled = false
@@ -1038,9 +1042,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre22Op4ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre22Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+                        Pre22Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre22Op1ExaOpera.isEnabled = false
                         Pre22Op2ExaOpera.isEnabled = false
                         Pre22Op3ExaOpera.isEnabled = false
@@ -1055,8 +1058,9 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre23Op1ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre23Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre23Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre23Op1ExaOpera.isEnabled = false
                         Pre23Op2ExaOpera.isEnabled = false
                         Pre23Op3ExaOpera.isEnabled = false
@@ -1073,9 +1077,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre23Op3ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre23Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre23Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre23Op1ExaOpera.isEnabled = false
                         Pre23Op2ExaOpera.isEnabled = false
                         Pre23Op3ExaOpera.isEnabled = false
@@ -1099,9 +1102,8 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre24Op1ExaOpera ->
                     if (checked) {
-                        califB2++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre24Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+                        Pre24Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre24Op1ExaOpera.isEnabled = false
                         Pre24Op2ExaOpera.isEnabled = false
                         Pre24Op3ExaOpera.isEnabled = false
@@ -1127,8 +1129,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre24Op4ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
-                        Pre24Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB2++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre24Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre24Op1ExaOpera.isEnabled = false
                         Pre24Op2ExaOpera.isEnabled = false
                         Pre24Op3ExaOpera.isEnabled = false
@@ -1170,7 +1173,7 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre25Op4ExaOpera ->
                     if (checked) {
-                        califB2++
+                        califB3++
                         Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
                         Pre25Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre25Op1ExaOpera.isEnabled = false
@@ -1196,8 +1199,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre26Op2ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre26Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB3++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre26Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre26Op1ExaOpera.isEnabled = false
                         Pre26Op2ExaOpera.isEnabled = false
                         Pre26Op3ExaOpera.isEnabled = false
@@ -1214,9 +1218,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre26Op4ExaOpera ->
                     if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre26Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre26Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre26Op1ExaOpera.isEnabled = false
                         Pre26Op2ExaOpera.isEnabled = false
                         Pre26Op3ExaOpera.isEnabled = false
@@ -1240,9 +1243,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre27Op2ExaOpera ->
                     if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre27Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre27Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre27Op1ExaOpera.isEnabled = false
                         Pre27Op2ExaOpera.isEnabled = false
                         Pre27Op3ExaOpera.isEnabled = false
@@ -1250,8 +1252,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre27Op3ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre27Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB3++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre27Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre27Op1ExaOpera.isEnabled = false
                         Pre27Op2ExaOpera.isEnabled = false
                         Pre27Op3ExaOpera.isEnabled = false
@@ -1337,9 +1340,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre29Op3ExaOpera ->
                     if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre29Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre29Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre29Op1ExaOpera.isEnabled = false
                         Pre29Op2ExaOpera.isEnabled = false
                         Pre29Op3ExaOpera.isEnabled = false
@@ -1347,8 +1349,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre29Op4ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre29Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB3++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre29Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre29Op1ExaOpera.isEnabled = false
                         Pre29Op2ExaOpera.isEnabled = false
                         Pre29Op3ExaOpera.isEnabled = false
@@ -1363,8 +1366,9 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre30Op1ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
-                        Pre30Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB3++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre30Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre30Op1ExaOpera.isEnabled = false
                         Pre30Op2ExaOpera.isEnabled = false
                         Pre30Op3ExaOpera.isEnabled = false
@@ -1390,9 +1394,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre30Op4ExaOpera ->
                     if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre30Op4ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+                        Pre30Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre30Op1ExaOpera.isEnabled = false
                         Pre30Op2ExaOpera.isEnabled = false
                         Pre30Op3ExaOpera.isEnabled = false
@@ -1407,9 +1410,8 @@ class Examen_Operativo : AppCompatActivity() {
             when (view.getId()) {
                 R.id.Pre31Op1ExaOpera ->
                     if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre31Op1ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre31Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre31Op1ExaOpera.isEnabled = false
                         Pre31Op2ExaOpera.isEnabled = false
                         Pre31Op3ExaOpera.isEnabled = false
@@ -1426,8 +1428,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre31Op3ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre31Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB3++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre31Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre31Op1ExaOpera.isEnabled = false
                         Pre31Op2ExaOpera.isEnabled = false
                         Pre31Op3ExaOpera.isEnabled = false
@@ -1460,8 +1463,9 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre32Op2ExaOpera ->
                     if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre32Op2ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
+                        califB3++
+                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
+                        Pre32Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
                         Pre32Op1ExaOpera.isEnabled = false
                         Pre32Op2ExaOpera.isEnabled = false
                         Pre32Op3ExaOpera.isEnabled = false
@@ -1469,9 +1473,8 @@ class Examen_Operativo : AppCompatActivity() {
                     }
                 R.id.Pre32Op3ExaOpera ->
                     if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre32Op3ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
+                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+                        Pre32Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
                         Pre32Op1ExaOpera.isEnabled = false
                         Pre32Op2ExaOpera.isEnabled = false
                         Pre32Op3ExaOpera.isEnabled = false
@@ -1577,54 +1580,10 @@ class Examen_Operativo : AppCompatActivity() {
             }
         }
     }
-    fun Pregunta35op(view: View) {
-        if (view is RadioButton) {
-            val checked = view.isChecked
-            when (view.getId()) {
-                R.id.Pre35Op1ExaOpera ->
-                    if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre35Op1ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
-                        Pre35Op1ExaOpera.isEnabled = false
-                        Pre35Op2ExaOpera.isEnabled = false
-                        Pre35Op3ExaOpera.isEnabled = false
-                        Pre35Op4ExaOpera.isEnabled = false
-                    }
-                R.id.Pre35Op2ExaOpera ->
-                    if (checked) {
-                        califB3++
-                        Toast.makeText(this, "Correcta", Toast.LENGTH_SHORT).show()
-                        Pre35Op2ExaOpera.setBackgroundColor(Color.rgb(0, 143, 57))//verde
-                        Pre35Op1ExaOpera.isEnabled = false
-                        Pre35Op2ExaOpera.isEnabled = false
-                        Pre35Op3ExaOpera.isEnabled = false
-                        Pre35Op4ExaOpera.isEnabled = false
-                    }
-                R.id.Pre35Op3ExaOpera ->
-                    if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
-                        Pre35Op3ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
-                        Pre35Op1ExaOpera.isEnabled = false
-                        Pre35Op2ExaOpera.isEnabled = false
-                        Pre35Op3ExaOpera.isEnabled = false
-                        Pre35Op4ExaOpera.isEnabled = false
-                    }
-                R.id.Pre35Op4ExaOpera ->
-                    if (checked) {
-                        Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
-                        Pre35Op4ExaOpera.setBackgroundColor(Color.rgb(255, 0, 0))//rojo
-                        Pre35Op1ExaOpera.isEnabled = false
-                        Pre35Op2ExaOpera.isEnabled = false
-                        Pre35Op3ExaOpera.isEnabled = false
-                        Pre35Op4ExaOpera.isEnabled = false
-                    }
-            }
-        }
-    }
 
     fun resultados(){
         var califT: Double = 0.0
-        califT = (califB1.toDouble() + califB2.toDouble() + califB3.toDouble()) / 3.5
+        califT = (califB1.toDouble() + califB2.toDouble() + califB3.toDouble()) / 3.4
         df.roundingMode = RoundingMode.CEILING
         calificacion = df.format(califT).toDouble()
 
