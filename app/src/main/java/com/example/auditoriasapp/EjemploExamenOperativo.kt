@@ -154,101 +154,119 @@ class EjemploExamenOperativo : AppCompatActivity() {
         ExaOperaEjemploTres.visibility = View.GONE
         ExaOperaEjemploCuatro.visibility = View.GONE
     }
-
-    fun buscarEmpleadoOperativo(v: View) {
-        //agregar usuario nuevo
-        if (etNombreNom_ExaOpera.text.toString().isNotEmpty() && idSwitchExaOpera.isChecked && Rol.equals("1") && numero_nomExOpera.text.toString().isEmpty()) {
-            var sentencia: String = ""
-            var sentencia2: String = ""
-            nombreEmp = etNombreNom_ExaOpera.text.toString()
-            val timeStamp: String = SimpleDateFormat("yyyyMMddHHmmss").format(Date())
-            tipoNomina
-            nomina = "EN"+timeStamp
-            area = "99999"
-            val direccion = "11111"
-            sentencia =
-                "Insert into personaNuevo(num_nomina,nombre,tiponomina,id_direccion,id_departamento,AgregadoP) values" +
-                        "('$nomina','$nombreEmp','$tipoNomina','$area','$direccion','$idU')"
-            sentencia2 =
-                "Insert into persona(id_persona,num_nomina,nombre,tiponomina,id_direccion,id_departamento) values" +
-                        "('$timeStamp','$nomina','$nombreEmp','$tipoNomina','$area','$direccion')"
-            val admin = DataBase(this)
-            if (admin.Ejecuta(sentencia)&& admin.Ejecuta(sentencia2)) {
-                admin.close()
-                Toast.makeText(this, "Se guardo el empleado", Toast.LENGTH_LONG).show()
-            } else {
-                admin.close()
-                Toast.makeText(this, "Error usuario ya existe", Toast.LENGTH_LONG).show()
-            }
-        }else{
-            Toast.makeText(this, "No puedes agregar a un usuario", Toast.LENGTH_SHORT).show()
+    fun buscarEmpleadoOp(v:View){
+        if (etNombreNom_ExaOpera.text.toString().isEmpty() && numero_nomExOpera.text.toString().isEmpty()){
+            Toast.makeText(this,"Debes llenar los datos para buscar",Toast.LENGTH_LONG).show()
         }
-        //buscar el usuario en la base de datos Sqlite
-        //por nomina
-        if (numero_nomExOpera.text.toString().isNotEmpty() && areaNom_exaOpera.text.toString().isEmpty()) {
-            var query: String = ""
-            nomina = numero_nomExOpera.text.toString()
-            tipoNomina
-            query =
-                "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
-                        "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where p.num_nomina ='$nomina' and p.tiponomina ='$tipoNomina'"
-            val admin = DataBase(this)
-            val cur = admin.Consulta(query)
-            if (cur == null) {
-                admin.close()
-                Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show()
-            } else {
-                if (cur.moveToFirst()) {
-                    Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
-                    etNombreNom_ExaOpera.setText(cur.getString(2))//nombre
-                    areaNom_exaOpera.setText(cur.getString(6))//direccion
-                    id_persona = cur.getInt(0)//id_persona
-                    etNombreNom_ExaOpera.isEnabled = false
-                    id_spinnerTipoNomina_exaOpera.isEnabled = false
-                    numero_nomExOpera.isEnabled = false
-                    idSwitchExaOpera.isEnabled = false
-                    admin.close()
-                } else {
-                    admin.close()
-                    Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
-                }
+        when(etNombreNom_ExaOpera.text.toString().isNotEmpty() && idSwitchExaOpera.isChecked && Rol.equals("2") && numero_nomExOpera.text.toString().isEmpty()){
+            true ->{
+                Toast.makeText(this,"No puedes agregar una nueva nómina",Toast.LENGTH_LONG).show()
             }
-        } else {
-            Toast.makeText(this, "falta llenar la nomina", Toast.LENGTH_SHORT).show()
         }
-        //por nombre
-        if (etNombreNom_ExaOpera.text.toString().isNotEmpty() && areaNom_exaOpera.text.toString().isEmpty()) {
-            var query: String = ""
-            nombreEmp = etNombreNom_ExaOpera.text.toString()
-            tipoNomina
-            query = "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
-                    "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where upper(p.nombre) =upper('$nombreEmp') and p.tiponomina ='$tipoNomina'"
-            val admin = DataBase(this)
-            val cur = admin.Consulta(query)
-            if (cur == null) {
-                admin.close()
-                Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show()
-            } else {
-                if (cur.moveToFirst()) {
-                    Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
-                    numero_nomExOpera.setText(cur.getString(1))//nombre
-                    areaNom_exaOpera.setText(cur.getString(6))//direccion
-                    id_persona = cur.getInt(0)//id_persona
-                    etNombreNom_ExaOpera.setText(cur.getString(2))//nombre
-                    etNombreNom_ExaOpera.isEnabled = false
-                    id_spinnerTipoNomina_exaOpera.isEnabled = false
-                    numero_nomExOpera.isEnabled = false
-                    idSwitchExaOpera.isEnabled = false
-                    admin.close()
-                } else {
-                    admin.close()
-                    Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
-                }
+        //agregar una nomina provisional
+        when(etNombreNom_ExaOpera.text.toString().isNotEmpty() && idSwitchExaOpera.isChecked && Rol.equals("1") && numero_nomExOpera.text.toString().isEmpty()){
+            true->{
+                agregarN()
+                bNombre()
             }
-        } else {
-            Toast.makeText(this, "Debes de llenar el nombre", Toast.LENGTH_SHORT).show()
+        }
+        //buscar por nomina
+        when(numero_nomExOpera.text.toString().isNotEmpty() && areaNom_exaOpera.text.toString().isEmpty()){
+            true->{
+                bNomina()
+            }
+        }
+        //buscar por nombre
+        when(etNombreNom_ExaOpera.text.toString().isNotEmpty() && areaNom_exaOpera.text.toString().isEmpty() && !idSwitchExaOpera.isChecked){
+            true->{
+                bNombre()
+            }
         }
     }
+    //Agregar nomina nueva
+    fun agregarN(){
+        var sentencia: String = ""
+        var sentencia2: String = ""
+        nombreEmp = etNombreNom_ExaOpera.text.toString()
+        val timeStamp: String = SimpleDateFormat("ddHHmmss").format(Date())
+        tipoNomina
+        nomina = "EN"+timeStamp
+        area = "99999"
+        val direccion = "11111"
+        sentencia =
+            "Insert into personaNuevo(id_persona,num_nomina,nombre,tiponomina,id_direccion,id_departamento,AgregadoP) values" +
+                    "('$timeStamp','$nomina','$nombreEmp','$tipoNomina','$area','$direccion','$idU')"
+        sentencia2 =
+            "Insert into persona(id_persona,num_nomina,nombre,tiponomina,id_direccion,id_departamento) values" +
+                    "('$timeStamp','$nomina','$nombreEmp','$tipoNomina','$area','$direccion')"
+        val admin = DataBase(this)
+        if (admin.Ejecuta(sentencia)&& admin.Ejecuta(sentencia2)) {
+            admin.close()
+            Toast.makeText(this, "Se guardo el empleado", Toast.LENGTH_LONG).show()
+        } else {
+            admin.close()
+            Toast.makeText(this, "Error usuario ya existe", Toast.LENGTH_LONG).show()
+        }
+    }
+    fun bNomina(){
+        var query: String = ""
+        nomina = numero_nomExOpera.text.toString()
+        tipoNomina
+        query =
+            "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
+                    "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where p.num_nomina ='$nomina' and p.tiponomina ='$tipoNomina'"
+        val admin = DataBase(this)
+        val cur = admin.Consulta(query)
+        if (cur == null) {
+            admin.close()
+            Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show()
+        } else {
+            if (cur.moveToFirst()) {
+                Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
+                etNombreNom_ExaOpera.setText(cur.getString(2))//nombre
+                areaNom_exaOpera.setText(cur.getString(6))//direccion
+                id_persona = cur.getInt(0)//id_persona
+                etNombreNom_ExaOpera.isEnabled = false
+                id_spinnerTipoNomina_exaOpera.isEnabled = false
+                numero_nomExOpera.isEnabled = false
+                idSwitchExaOpera.isEnabled = false
+                admin.close()
+            } else {
+                admin.close()
+                Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    fun bNombre(){
+        var query: String = ""
+        nombreEmp = etNombreNom_ExaOpera.text.toString()
+        tipoNomina
+        query = "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
+                "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where upper(p.nombre) =upper('$nombreEmp') and p.tiponomina ='$tipoNomina'"
+        val admin = DataBase(this)
+        val cur = admin.Consulta(query)
+        if (cur == null) {
+            admin.close()
+            Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show()
+        } else {
+            if (cur.moveToFirst()) {
+                Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
+                numero_nomExOpera.setText(cur.getString(1))//nombre
+                areaNom_exaOpera.setText(cur.getString(6))//direccion
+                id_persona = cur.getInt(0)//id_persona
+                etNombreNom_ExaOpera.setText(cur.getString(2))//nombre
+                etNombreNom_ExaOpera.isEnabled = false
+                id_spinnerTipoNomina_exaOpera.isEnabled = false
+                numero_nomExOpera.isEnabled = false
+                idSwitchExaOpera.isEnabled = false
+                admin.close()
+            } else {
+                admin.close()
+                Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 
     fun limpiar_clickOperativo(v: View){
         etNombreNom_ExaOpera.isEnabled = true

@@ -1,5 +1,6 @@
 package com.example.auditoriasapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -83,6 +84,12 @@ class AgregarUsuarios : AppCompatActivity() {
                 }
             }
         }
+        regresarM.setOnClickListener {
+            val i = Intent(this,menuActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
         borrar_txt.setOnClickListener {
             usuario.setText("")
             nombre_usu.setText("")
@@ -93,6 +100,7 @@ class AgregarUsuarios : AppCompatActivity() {
             tipousu_spinner.isEnabled = true
             idUsu = 0
         }
+
         b_accion.setOnClickListener {
             if (Taccion.equals("Buscar")){
                 if (usuario.text.toString().isNotEmpty()){

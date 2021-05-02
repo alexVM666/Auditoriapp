@@ -42,10 +42,10 @@ class ActivityResultadosExamenAdmin : AppCompatActivity() {
             idPercentilExAdmin.text = "$percentil"
 
             if(idPercentilExAdmin.text.equals("A")){
-                caraResultExAdmin.setImageResource(R.drawable.bien)
+                caraResultExAdmin2.setImageResource(R.drawable.cheque)
             }
             if (idPercentilExAdmin.text.equals("NA")){
-                caraResultExAdmin.setImageResource(R.drawable.mal)
+                caraResultExAdmin2.setImageResource(R.drawable.multiplicar)
             }
         }
     }

@@ -159,7 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Buscar"
-                    android:onClick="buscarEmpleadoOperativo"
+                    android:onClick="buscarEmpleadoOp"
                     android:textColor="@android:color/white"
                     android:background="@drawable/button_rounded"
                     android:layout_marginLeft="3dp"

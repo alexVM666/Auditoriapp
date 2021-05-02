@@ -119,7 +119,7 @@ class ActivityResultVolleyExamenes : AppCompatActivity() {
                 txt_bloque3.setText("$calif3/5")
                 txt_resultadof.setText("$resultado/5")
             }else{
-                txt_bloque1.setText("$calif1/15")
+                txt_bloque1.setText("$calif1/14")
                 txt_bloque2.setText("$calif2/10")
                 txt_bloque3.setText("$calif3/10")
                 txt_resultadof.setText("$resultado/10")

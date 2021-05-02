@@ -189,6 +189,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/regresarM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:background="@drawable/button_rounded"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:ems="7"
+                />
+            <Button
                 android:id="@+id/borrar_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -199,14 +212,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
-                android:ems="9"
+                android:ems="7"
                 />
             <Button
                 android:id="@+id/b_accion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Acción"
-                android:ems="8"
+                android:ems="7"
                 android:textColor="@android:color/white"
                 android:background="@drawable/button_rounded"
                 android:layout_marginLeft="20dp"

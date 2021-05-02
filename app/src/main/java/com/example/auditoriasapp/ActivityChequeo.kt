@@ -311,66 +311,77 @@ class ActivityChequeo : AppCompatActivity() {
         txtObservaciones.visibility = View.GONE
         id_Observaciones.visibility = View.GONE
     }
-    fun buscarAutomovilCheck(v: View){
-        //buscar automovil por numero economico
-        if(id_NEconomicoChequeo.text.toString().isNotEmpty() && id_placasChequeo.text.toString().isEmpty()){
-            var query: String = ""
-            numeroEconomico = id_NEconomicoChequeo.text.toString()
-            query =
-                "Select c.id_carro,c.id_direccion,c.id_departamento,c.id_vehiculo,c.id_persona," +
-                        "c.marca,c.submarca,c.modelo,c.serie,c.motor,c.placas,c.inventario,v.tipovehiculo,p.nombre,dep.departamento,d.direccion,c.subtipo " +
-                        "from carro as c inner join direccion as d on c.id_direccion=d.id_direccion " +
-                        "inner join departamento as dep on dep.id_departamento = c.id_departamento" +
-                        " inner join  tipovehiculo as v on v.id_vehiculo=c.id_vehiculo " +
-                        "inner join persona as p on p.id_persona = c.id_persona where c.inventario = '$numeroEconomico'"
-            var admin = DataBase(this)
-            var cur = admin.Consulta(query)
-            if (cur == null) {
-                admin.close()
-                Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show();
-                Nomina_id_Chequeo.requestFocus()
-            } else {
-                if (cur.moveToFirst()) {
-                    Toast.makeText(this, "Se encontro el vehiculo", Toast.LENGTH_SHORT).show()
-                    id_area_nombreChequeo.setText(cur.getString(15))//area donde pertenece
-                    tipo_vehiculoChequeo.setText(cur.getString(13))//usuario
-                    T_vehiculoChequeo.setText(cur.getString(12))//Tvehiculo
-                    id_marcaChequeo.setText(cur.getString(5))//marca
-                    id_submarcaChequeo.setText(cur.getString(16))//subtipo
-                    id_placasChequeo.setText(cur.getString(10))//placas
-                    id_carro = cur.getInt(0)//id_carro
-                    id_NEconomicoChequeo.isEnabled = false
-                    id_placasChequeo.isEnabled = false
-                    admin.close()
-                } else {
-                    admin.close()
-                    Toast.makeText(this, "No se Encontro el Vehiculo", Toast.LENGTH_SHORT).show()
-                }
-            }
-            var sentencia2: String
-            numeroEconomico = id_NEconomicoChequeo.text.toString()
-            sentencia2 = "Select fecha_actual, kilometraje_actual from chequeo where " +
-                    "id_carro = '$id_carro' and id_usuario='$idU' and fecha_actual = (select max(fecha_actual) from chequeo) "
-            var admin2 = DataBase(this)
-            var cur2 = admin.Consulta(sentencia2)
-            if (cur2 == null) {
-                admin2.close()
-                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-            } else {
-                if (cur2.moveToFirst()) {
-                    Toast.makeText(this, "Se encontro antecedentes", Toast.LENGTH_SHORT).show()
-                    fechaUltimaRevision.setText(cur2.getString(0))
-                    idUltimoKM.setText(cur2.getString(1))
-                    admin2.close()
-                } else {
-                    admin2.close()
-                    Toast.makeText(this, "No se encontraron registros previos", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }else{
-            Toast.makeText(this, "Se necesita llenar este campo", Toast.LENGTH_SHORT).show()
+    fun bAutomovil(v:View){
+        if (id_NEconomicoChequeo.text.toString().isEmpty() && id_placasChequeo.text.toString().isEmpty()){
+            Toast.makeText(this,"Debes de llenar la info. para buscar un Automóvil",Toast.LENGTH_LONG).show()
         }
-        if (id_NEconomicoChequeo.text.toString().isEmpty() && id_placasChequeo.text.toString().isNotEmpty()){
+        when(id_NEconomicoChequeo.text.toString().isNotEmpty() && id_placasChequeo.text.toString().isEmpty()){
+            true ->{
+               bNumEco()
+            }
+        }
+        when(id_NEconomicoChequeo.text.toString().isEmpty() && id_placasChequeo.text.toString().isNotEmpty()){
+            true ->{
+                bPlacas()
+            }
+        }
+    }
+    fun bNumEco(){
+        var query: String = ""
+        numeroEconomico = id_NEconomicoChequeo.text.toString()
+        query =
+            "Select c.id_carro,c.id_direccion,c.id_departamento,c.id_vehiculo,c.id_persona," +
+                    "c.marca,c.submarca,c.modelo,c.serie,c.motor,c.placas,c.inventario,v.tipovehiculo,p.nombre,dep.departamento,d.direccion,c.subtipo " +
+                    "from carro as c inner join direccion as d on c.id_direccion=d.id_direccion " +
+                    "inner join departamento as dep on dep.id_departamento = c.id_departamento" +
+                    " inner join  tipovehiculo as v on v.id_vehiculo=c.id_vehiculo " +
+                    "inner join persona as p on p.id_persona = c.id_persona where c.inventario = '$numeroEconomico'"
+        var admin = DataBase(this)
+        var cur = admin.Consulta(query)
+        if (cur == null) {
+            admin.close()
+            Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show();
+            Nomina_id_Chequeo.requestFocus()
+        } else {
+            if (cur.moveToFirst()) {
+                Toast.makeText(this, "Se encontro el vehiculo", Toast.LENGTH_SHORT).show()
+                id_area_nombreChequeo.setText(cur.getString(15))//area donde pertenece
+                tipo_vehiculoChequeo.setText(cur.getString(13))//usuario
+                T_vehiculoChequeo.setText(cur.getString(12))//Tvehiculo
+                id_marcaChequeo.setText(cur.getString(5))//marca
+                id_submarcaChequeo.setText(cur.getString(16))//subtipo
+                id_placasChequeo.setText(cur.getString(10))//placas
+                id_carro = cur.getInt(0)//id_carro
+                id_NEconomicoChequeo.isEnabled = false
+                id_placasChequeo.isEnabled = false
+                admin.close()
+            } else {
+                admin.close()
+                Toast.makeText(this, "No se Encontro el Vehiculo", Toast.LENGTH_SHORT).show()
+            }
+        }
+        var sentencia2: String
+        numeroEconomico = id_NEconomicoChequeo.text.toString()
+        sentencia2 = "Select fecha_actual, kilometraje_actual from chequeo where " +
+                "id_carro = '$id_carro' and id_usuario='$idU' and fecha_actual = (select max(fecha_actual) from chequeo) "
+        var admin2 = DataBase(this)
+        var cur2 = admin.Consulta(sentencia2)
+        if (cur2 == null) {
+            admin2.close()
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        } else {
+            if (cur2.moveToFirst()) {
+                Toast.makeText(this, "Se encontro antecedentes", Toast.LENGTH_SHORT).show()
+                fechaUltimaRevision.setText(cur2.getString(0))
+                idUltimoKM.setText(cur2.getString(1))
+                admin2.close()
+            } else {
+                admin2.close()
+                Toast.makeText(this, "No se encontraron registros previos", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    fun bPlacas(){
             var query: String = ""
             placas = id_placasChequeo.text.toString()
             query =
@@ -380,8 +391,8 @@ class ActivityChequeo : AppCompatActivity() {
                         "inner join departamento as dep on dep.id_departamento = c.id_departamento" +
                         " inner join  tipovehiculo as v on v.id_vehiculo=c.id_vehiculo " +
                         "inner join persona as p on p.id_persona = c.id_persona where upper(c.placas) = upper('$placas')"
-            var admin = DataBase(this)
-            var cur = admin.Consulta(query)
+            val admin = DataBase(this)
+            val cur = admin.Consulta(query)
             if (cur == null) {
                 admin.close()
                 Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show();
@@ -425,111 +436,124 @@ class ActivityChequeo : AppCompatActivity() {
                     Toast.makeText(this, "No se encontraron registros previos", Toast.LENGTH_SHORT).show()
                 }
             }
-        }else{
-            Toast.makeText(this, "Se necesita llenar este campo", Toast.LENGTH_SHORT).show()
+    }
+    //buscar al empleado
+    fun bEmpleado(v:View){
+        if (etNombreNom_chequeo.text.toString().isEmpty() && Nomina_id_Chequeo.text.toString().isEmpty()){
+            Toast.makeText(this,"Debes de llenar la información.",Toast.LENGTH_LONG).show()
+        }
+        when(etNombreNom_chequeo.text.toString().isNotEmpty() && idSwitch_chequeo.isChecked && Nomina_id_Chequeo.text.toString().isEmpty() && Rol.equals("2")){
+            true ->{
+                Toast.makeText(this,"No puedes agregar una nueva nómina",Toast.LENGTH_LONG).show()
+            }
+        }
+        //guardar un empleado
+        when(etNombreNom_chequeo.text.toString().isNotEmpty() && idSwitch_chequeo.isChecked && Nomina_id_Chequeo.text.toString().isEmpty() && Rol.equals("1")){
+            true ->{
+                AgregarNom()
+                bporNombre()
+            }
+        }
+        //Buscar por nomina
+        when(Nomina_id_Chequeo.text.toString().isNotEmpty() && areaNom_chequeo.text.toString().isEmpty() && !idSwitch_chequeo.isChecked){
+            true ->{
+                bPorNomina()
+            }
+        }
+        //buscar por nombre
+        when(etNombreNom_chequeo.text.toString().isNotEmpty() && areaNom_chequeo.text.toString().isEmpty()){
+            true ->{
+                bporNombre()
+            }
         }
     }
-
-    fun buscarEmpleadoCheck(v: View) {
-        //agregar usuario nuevo
-        if (etNombreNom_chequeo.text.toString().isNotEmpty() && idSwitch_chequeo.isChecked && Nomina_id_Chequeo.text.toString().isEmpty() && Rol.equals("1")) {
-            var sentencia: String = ""
-            var sentencia2: String = ""
-            nombreEmp = etNombreNom_chequeo.text.toString()
-            val timeStamp: String = SimpleDateFormat("ddMMyyyyHHmmss").format(Date())
-            Tnomina
-            nomina = "EN"+timeStamp
-            area = "99999"
-            var direccion = "11111"
-            sentencia =
-                "Insert into personaNuevo(num_nomina,nombre,tiponomina,id_direccion,id_departamento,AgregadoP) values" +
-                        "('$nomina','$nombreEmp','$Tnomina','$area','$direccion','$idU')"
-            sentencia2 =
-                "Insert into persona(id_persona,num_nomina,nombre,tiponomina,id_direccion,id_departamento) values" +
-                        "('$timeStamp','$nomina','$nombreEmp','$Tnomina','$area','$direccion')"
-            val admin = DataBase(this)
-            if (admin.Ejecuta(sentencia) &&admin.Ejecuta(sentencia2)) {
-                admin.close()
-                Toast.makeText(this, "Se guardo el empleado", Toast.LENGTH_LONG).show();
-            } else {
-                admin.close()
-                Toast.makeText(this, "Error usuario ya existe", Toast.LENGTH_LONG).show();
-                etNombreNom_chequeo.requestFocus()
-            }
-
-        }else{
-            Toast.makeText(this, "No puedes agregar a un usuario", Toast.LENGTH_SHORT).show();
-        }
-        //buscar el usuario en la base de datos Sqlite
-        //por nomina
-        if (Nomina_id_Chequeo.text.toString().isNotEmpty() && areaNom_chequeo.text.toString().isEmpty()) {
-            var query4: String = ""
-            nomina = Nomina_id_Chequeo.text.toString()
-            Tnomina
-            query4 =
-                "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
-                        "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where p.num_nomina ='$nomina' and p.tiponomina ='$Tnomina'"
-            val admin = DataBase(this)
-            val cur = admin.Consulta(query4)
-            if (cur == null) {
-                admin.close()
-                Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show();
-                Nomina_id_Chequeo.requestFocus()
-            } else {
-                if (cur.moveToFirst()) {
-                    Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
-                    etNombreNom_chequeo.setText(cur.getString(2))
-                    areaNom_chequeo.setText(cur.getString(6))
-                    id_persona = cur.getInt(0)//id_persona
-                    etNombreNom_chequeo.isEnabled = false
-                    id_spinnerTipoNominaChequeo.isEnabled = false
-                    Nomina_id_Chequeo.isEnabled = false
-                    idSwitch_chequeo.isEnabled = false
-                    admin.close()
-                } else {
-                    admin.close()
-                    Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
-                }
-            }
+    fun AgregarNom(){
+        var sentencia: String = ""
+        var sentencia2: String = ""
+        nombreEmp = etNombreNom_chequeo.text.toString()
+        val timeStamp: String = SimpleDateFormat("ddHHmmss").format(Date())
+        Tnomina
+        nomina = "EN"+timeStamp
+        area = "99999"
+        var direccion = "11111"
+        sentencia =
+            "Insert into personaNuevo(id_persona,num_nomina,nombre,tiponomina,id_direccion,id_departamento,AgregadoP) values" +
+                    "('$timeStamp','$nomina','$nombreEmp','$Tnomina','$area','$direccion','$idU')"
+        sentencia2 =
+            "Insert into persona(id_persona,num_nomina,nombre,tiponomina,id_direccion,id_departamento) values" +
+                    "('$timeStamp','$nomina','$nombreEmp','$Tnomina','$area','$direccion')"
+        val admin = DataBase(this)
+        if (admin.Ejecuta(sentencia) &&admin.Ejecuta(sentencia2)) {
+            admin.close()
+            Toast.makeText(this, "Se guardo el empleado", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "falta llenar la nomina", Toast.LENGTH_SHORT).show()
+            admin.close()
+            Toast.makeText(this, "Error usuario ya existe", Toast.LENGTH_LONG).show();
+            etNombreNom_chequeo.requestFocus()
         }
-        //por nombre
-        if (etNombreNom_chequeo.text.toString().isNotEmpty() && areaNom_chequeo.text.toString().isEmpty()) {
-            var query: String = ""
-            nombreEmp = etNombreNom_chequeo.text.toString()
-            Tnomina
-            query = "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
-                    "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where upper(p.nombre) =upper('$nombreEmp') and p.tiponomina ='$Tnomina'"
-            val admin = DataBase(this)
-            val cur = admin.Consulta(query)
-            if (cur == null) {
-                admin.close()
-                Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show()
-                Nomina_id_Chequeo.requestFocus()
-            } else {
-                if (cur.moveToFirst()) {
-                    Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
-                    Nomina_id_Chequeo.setText(cur.getString(1))//nomina
-                    areaNom_chequeo.setText(cur.getString(6))//direccion
-                    id_persona = cur.getInt(0)//id_persona
-                    etNombreNom_chequeo.setText(cur.getString(2))//nombre
-                    etNombreNom_chequeo.isEnabled = false
-                    id_spinnerTipoNominaChequeo.isEnabled = false
-                    Nomina_id_Chequeo.isEnabled = false
-                    idSwitch_chequeo.isEnabled = false
-                    admin.close()
-                } else {
-                    Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
-                }
-            }
+    }
+    fun bPorNomina(){
+        var query4: String = ""
+        nomina = Nomina_id_Chequeo.text.toString()
+        Tnomina
+        query4 =
+            "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
+                    "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where p.num_nomina ='$nomina' and p.tiponomina ='$Tnomina'"
+        val admin = DataBase(this)
+        val cur = admin.Consulta(query4)
+        if (cur == null) {
+            admin.close()
+            Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show();
+            Nomina_id_Chequeo.requestFocus()
         } else {
-            Toast.makeText(this, "Debes de llenar el nombre", Toast.LENGTH_SHORT).show()
+            if (cur.moveToFirst()) {
+                Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
+                etNombreNom_chequeo.setText(cur.getString(2))
+                areaNom_chequeo.setText(cur.getString(6))
+                id_persona = cur.getInt(0)//id_persona
+                etNombreNom_chequeo.isEnabled = false
+                id_spinnerTipoNominaChequeo.isEnabled = false
+                Nomina_id_Chequeo.isEnabled = false
+                idSwitch_chequeo.isEnabled = false
+                admin.close()
+            } else {
+                admin.close()
+                Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    fun bporNombre(){
+        var query: String = ""
+        nombreEmp = etNombreNom_chequeo.text.toString()
+        Tnomina
+        query = "Select p.id_persona,p.num_nomina,p.nombre,p.tiponomina,p.id_direccion,p.id_departamento,d.direccion,dp.departamento " +
+                "from persona as p inner join direccion as d on p.id_direccion=d.id_direccion inner join departamento as dp on dp.id_departamento=p.id_departamento where upper(p.nombre) =upper('$nombreEmp') and p.tiponomina ='$Tnomina'"
+        val admin = DataBase(this)
+        val cur = admin.Consulta(query)
+        if (cur == null) {
+            admin.close()
+            Toast.makeText(this, "Error de Capa 8", Toast.LENGTH_SHORT).show()
+            Nomina_id_Chequeo.requestFocus()
+        } else {
+            if (cur.moveToFirst()) {
+                Toast.makeText(this, "Se encontro el empleado", Toast.LENGTH_SHORT).show()
+                Nomina_id_Chequeo.setText(cur.getString(1))//nomina
+                areaNom_chequeo.setText(cur.getString(6))//direccion
+                id_persona = cur.getInt(0)//id_persona
+                etNombreNom_chequeo.setText(cur.getString(2))//nombre
+                etNombreNom_chequeo.isEnabled = false
+                id_spinnerTipoNominaChequeo.isEnabled = false
+                Nomina_id_Chequeo.isEnabled = false
+                idSwitch_chequeo.isEnabled = false
+                admin.close()
+            } else {
+                Toast.makeText(this, "No se Encontro el empleado", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
     fun regresarMenu(v: View){
-        var audimenu = Intent(this,menuActivity::class.java)
+        val audimenu = Intent(this,menuActivity::class.java)
         startActivity(audimenu)
         finish()
     }

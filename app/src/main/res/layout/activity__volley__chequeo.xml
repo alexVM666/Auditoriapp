@@ -4,13 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activity_Volley_Chequeo">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_chequeoVolley"
+    <SearchView
+        android:id="@+id/searchViewVch"
+        android:queryHint="Introduce un número de inventario para buscar..."
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/custom_background"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/searchViewVch"
+        >
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayoutVch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            app:layout_constraintTop_toTopOf="@+id/searchViewVch"
+            tools:ignore="NotSibling">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_chequeoVolley"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <Button
         android:id="@+id/finalizarChequeoRVvolley"
         android:layout_width="wrap_content"

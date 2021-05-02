@@ -32,17 +32,17 @@ class resultados_examen_operativo : AppCompatActivity() {
             NombreEvaluadorExOpera.text="$nomU"
             TextfechaResExOpera.text = "$fech"
             idNombreExOpera.text = "$nombreEmp"
-            Resulbloque1ExOpera.text = "$califB1"+" /15"
+            Resulbloque1ExOpera.text = "$califB1"+" /14"
             Resulbloque2ExOpera.text = "$califB2"+" /10"
             Resulbloque3ExOpera.text = "$califB3"+" /10"
             idResultadoFinalExOpera.text = "$calificacion"+" /10"
             idPercentilExOpera.text = "$percentil"
 
             if(idPercentilExOpera.text.equals("A")){
-                caraResultExOperativo.setImageResource(R.drawable.bien)
+                caraResultExOperativo2.setImageResource(R.drawable.cheque)
             }
             if (idPercentilExOpera.text.equals("NA")){
-                caraResultExOperativo.setImageResource(R.drawable.mal)
+                caraResultExOperativo2.setImageResource(R.drawable.multiplicar)
             }
         }
     }
